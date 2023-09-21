@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="pricing.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+<body>
+    <div class="container-fluid fixed">
+        <div class="container">
+     
+            <nav class="navbar navbar-expand-sm navbar-white  fixed-top" style="background-color: white;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">
+                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;height: 70px;margin-top: 10px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                
+                                <a class="nav-link" href="#">Service<span class="caret-down-icon"></span></a>
+                                <ul class="dropdown-menu" id="servicesDropdown">
+                                
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="service.html">More</a></li>
+                                </ul>
+                            </li>
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="portfolio.html">More</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="stories.html">Stories</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    
+    
+    <div class="container">
+        <div class="heading">
+            <h3>PHOTOGRAPHY PRICING & PACKAGES</h3>
+        </div>
+    </div>
+    
+    <div class="container-fluid portfolio">
+        <div class="container">
+            <h3>PRICING</h3>
+            <div class="anchor">
+                <p><a href="index.html">Home</a></p>&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;
+                <p class="active">Pricing</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="pricingSection">
+        <!-- Pricing data will be dynamically appended here -->
+    </div>
+    
+    <script>
+        // Function to encode the Uint8Array image data to base64
+        function encodeImageToBase64(imageData) {
+            let binary = '';
+            for (let i = 0; i < imageData.length; i++) {
+                binary += String.fromCharCode(imageData[i]);
+            }
+            return window.btoa(binary);
+        }
+    
+        function createPricingElements(pricingData) {
+            const pricingSection = document.getElementById('pricingSection');
+    
+            pricingData.forEach((item) => {
+                console.log('Image data:', item.image);
+                const div = document.createElement('div');
+                div.classList.add('incontainer');
+    
+                const img = document.createElement('img');
+                img.src = `data:image/png;base64,${encodeImageToBase64(item.image.data)}`;
+                img.alt = item.title;
+    
+                const divPricetext = document.createElement('div');
+                divPricetext.classList.add('pricetext');
+    
+                const h5 = document.createElement('h5');
+                h5.textContent = item.title;
+    
+                const p = document.createElement('p');
+                p.textContent = item.subtitle;
+    
+                const ul = document.createElement('ul');
+                item.terms_and_conditions.split('\n').forEach((line) => {
+                    const li = document.createElement('li');
+                    li.textContent = line;
+                    ul.appendChild(li);
+                });
+    
+                const h6 = document.createElement('h6');
+                h6.innerHTML = `<strong>PRICE: FROM ${item.price} INR</strong>`;
+    
+                const linkSamples = document.createElement('a');
+                linkSamples.href = '#'; // Add the link to the samples if available
+    
+                const linkTerms = document.createElement('a');
+                linkTerms.href = '#'; // Add the link to the terms and conditions if available
+    
+                divPricetext.appendChild(h5);
+                divPricetext.appendChild(p);
+                divPricetext.appendChild(ul);
+                divPricetext.appendChild(h6);
+                divPricetext.appendChild(linkSamples);
+                divPricetext.appendChild(document.createElement('br'));
+                divPricetext.appendChild(linkTerms);
+    
+                div.appendChild(img);
+                div.appendChild(divPricetext);
+    
+                pricingSection.appendChild(div);
+            });
+        }
+    
+        fetch('http://18.214.88.216:80/api/pricing/pricing')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch pricing data');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                createPricingElements(data);
+            })
+            .catch((error) => {
+                console.error('Error:', error.message);
+                // Handle the error scenario
+            });
+    </script>
+    
+
+
+
+<br>
+<div class="container text">
+    <p>* Bronze package includes only the Baby. If you would like to be part of the clicks, kindly choose one of the other packages. In the case that you want to add more members from your family (grandparents, for example), do contact me directly for customized package details and pricing.</p>
+
+    <p>Prices are inclusive of GST.</p>
+    <!-- <p>Behind the scenes photoshoot video: Rs 5 000</p>
+    <p>Make-up and hair: from Rs 5000</p>
+    <p>Addition of local garden location (other things don’t change): Rs 3 000</p>
+    <p>Travelling to client’s home with props in Pune: from Rs 10 000</p>
+    <p>Additional member (for example, grandparents): Rs 2 000 per person</p>
+    <p>Weekend/holiday sessions additional charges: Rs 5 000</p>
+    <p>Additional professionally retouched 1 photo: Rs 1 500</p> -->
+    <p>Prices are non-negotiable.</p>
+    <p>We do not share RAW or unedited photos.</p>
+    <p>Editing takes 5-6 weeks.</p>
+    <p>The photography pricing & packages can change before prior notice.</p>
+    <p>These are the standard packages, which varies a little bit for maternity, newborn or baby photo shoots. Please call me for more detailed pricing.</p>
+    <p>Learn more about our <a href="service.html">services.</a></p>
+</div>
+</div>
+
+
+
+
+<!--Single Line-->
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span>Ready to shoot? Still curious? We’re more than happy to help you!</span>
+            </div>
+            <div class="col-lg-4">
+                <a href="requestappoint.html">
+                <button class="btn btn-outline-secondary btn-sm">REQUEST AN APPOINTMENT</button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid footer" style="margin-top: -47px; color: black;">
+    <div class="container">
+        <div class="row" style="color: #000;">
+            <div class="col-md-4">
+                <h3 class="footerh3">DayOfBorn PHOTOGRAPHY</h3>
+                <P class="footerpara">You are warmly welcomed in our maternity & kids atelier in Bavdhan, green and peaceful suburbs of Pune, perfectly suited for candid and happy clicks!</P>
+                <div class="socialfooter">
+                    <span><a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a></span>&nbsp;
+                    <span><a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a></span>&nbsp;
+                    <span><a href="https://youtube.com/@dayofborn#DOB3440"><i class="fa fa-youtube"></i></a></span>&nbsp;
+                    <span><a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="footerh3">CONTACT INFO</h3>
+                <ul class="footerservice">
+                    <li><a href="#"><p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vignanpuri colony, Mythri Nagar, Kukatpally</p></a></li>
+                    <li><a href="tel:9573796339"><p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91 9573796339</p></a></li>
+                    <li><a href="mailto:dayofborn@gmail.com"><p><i class="fa fa-envelope"></i>&nbsp;&nbsp;dayofborn@gmail.com</p></a></li>
+                    <li><a href="www.dayofborn.com"><p><i class="fa fa-globe"></i>&nbsp;&nbsp;www.dayofborn.com</p></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="footerh3">WHAT PEOPLE SAY</h3>
+                <img src="images/Logo web.png" alt="" width="350px" height="100px">
+                <p>DayOfBorn photography</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  <!--LAST FOOTER -->
+  <div class="container-fluid" style="background-color: #ededed; color: #000;">
+    <div class="container">
+      <div class="row lastfooter">
+        <div class="col-sm-6">
+            <p>2012 - 2023 © Copyrights DayOfBorn Photography | Hyderabad |  Privacy Policy  |  <a href="sitemap.html">sitemap</a></p>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="js/accordion-menu2.js"></script>
+      
+      
+      
+      
+      <script>
+      $(function () {
+      $(".accordion-btn").on("click", function () {
+      $(this).next(".accordion-list").slideToggle();
+      });
+      });
+      </script>
+      
+      <script>
+        const toTop = document.querySelector(".to-top");
+      
+        window.addEventListener("scroll", ()=>{
+          if(window.pageYOffset > 100){
+            toTop.classList.add("active");
+          }
+          else{
+            toTop.classList.remove("active");
+          }
+        })
+      </script>
+    
+ 
+</body>
+</html>

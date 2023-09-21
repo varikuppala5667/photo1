@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Images</title>
+  <link rel="stylesheet" href="file.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <!--ICONS-->
+  <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  
+</head>
+
+<body>
+  <div class="container-fluid fixed">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-white fixed-top" style="background-color: white;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            
+                            <a class="nav-link" href="#">Service<span class="caret-down-icon"></span></a>
+                            <ul class="dropdown-menu" id="servicesDropdown">
+                                
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="service.html">More</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-link" href="#">Portfolio<span class="caret-down-icon"></span></a>
+                            <ul class="dropdown-menu">
+                              
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="portfolio.html">More</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Stories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+
+<div id="storyDetails">
+  <h3 id="title"></h3>
+</div>
+
+<div class="container">
+  <p id="subtitle"></p>
+</div>
+
+
+    <div id="imagesContainer" class="row column" style="width: 100%;">
+    
+    </div>
+  
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const storyId = urlParams.get('id');
+
+  // Fetch images for the story and populate them
+  fetch(`http://l18.214.88.216:80/api/photos/photos/${storyId}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch story data');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const imagesContainer = document.getElementById('imagesContainer');
+
+      data.forEach(imageData => {
+        // Convert Buffer data to base64-encoded string
+        const base64Image = Uint8ArrayToBase64(imageData.image.data);
+
+        const img = document.createElement('img');
+        img.src = `data:image/png;base64,${base64Image}`;
+        img.alt = 'Story Image';
+        img.classList.add('image');
+        img.style.width = '100%';
+
+        imagesContainer.appendChild(img);
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error.message);
+    });
+
+  // Function to convert Uint8Array to base64-encoded string
+  function Uint8ArrayToBase64(array) {
+    let binary = '';
+    for (let i = 0; i < array.length; i++) {
+      binary += String.fromCharCode(array[i]);
+    }
+    return window.btoa(binary);
+  }
+
+  // Fetch the story details and populate title and subtitle
+  fetch(`http://18.214.88.216:80/api/stories/stories/${storyId}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch story data');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const titleElement = document.getElementById('title');
+      const subtitleElement = document.getElementById('subtitle');
+
+      titleElement.textContent = data.title;     // Assuming the API response has a "title" property
+      subtitleElement.textContent = data.subtitle; // Assuming the API response has a "subtitle" property
+    })
+    .catch(error => {
+      console.error('Error:', error.message);
+    });
+</script>
+</body>
+</html>

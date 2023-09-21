@@ -1,0 +1,534 @@
+
+*{
+  margin: 0px;
+  padding:0px;
+}
+.content-section {
+  display: none;
+  margin: auto;
+}
+.content-section.active {
+  display: block;
+}
+
+.content-section{
+  width:90%;
+}
+
+#main-content{
+background-color: pink;
+margin: 0px;
+padding: opx;
+}
+
+.links{
+background-color: #040504;
+margin: 0px;
+padding: 0px;
+}
+.sidebar {
+  width: 250px; /* Set the width */
+  height: 100vh; /* Set the height */
+  position: fixed;
+  top: 0;
+  left: 0;
+ padding:10px;
+}
+
+.heading{
+ text-align: center;
+  font-size: 40px;
+  font-family: itallic;
+  color:#fff;
+}
+.logout button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f44336;
+  margin-left: 40px;
+  width:100px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout button:hover {
+  background-color: #cc4040;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 30px;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="file"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+border: 1px solid #050000;
+margin-top: 20px;
+}
+
+tr,th,td{
+border: 1px solid #050000;
+}
+
+
+th, td {
+padding: 8px;
+border: 1px solid #050000;
+vertical-align: top; 
+height:60px;
+width:400px;
+}
+
+img {
+max-width: 100px;
+height: auto;
+}
+
+.custom-sweet-alert {
+width: 450px; /* Adjust the width as needed */
+max-width: 90%; /* Ensure it doesn't exceed the screen width */
+}
+
+
+.navbar.sticky-top {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+
+/* nav buttons */
+/* CSS for the buttons in the sidebar */
+/* CSS for the buttons in the sidebar */
+.sidebar .nav-item {
+margin-bottom: 5px; /* Adjust the margin between buttons as needed */
+}
+
+.sidebar .nav-link {
+padding: 10px 20px; /* Adjust the padding as needed */
+text-align: left; /* Align the button text to the left */
+color: #333; /* Text color for normal state */
+background-color: transparent; /* Transparent background for normal state */
+border: none; /* Remove the default button border */
+border-radius: 0; /* Remove the default button border radius */
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus {
+background-color: #f5f5f5; /* Background color on hover/focus */
+color: #333; /* Text color on hover/focus */
+text-decoration: none; /* Remove underline on hover/focus */
+}
+
+.sidebar .nav-link.active {
+background-color: #024892;
+color: #fff; 
+margin:10px;
+width: 150px;
+text-align: center;
+}
+
+.sidebar .nav-link.active:hover{
+background-color: #6dabec;
+}
+
+
+/* Optional: Add a box-shadow to the active button */
+.sidebar .nav-link.active {
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-link{
+background-color: #007bff;
+}
+
+h1{
+font-family: itallic;
+margin-top: 50px;
+}
+
+/* Styling for the "Edit" and "Delete" buttons */
+button {
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+color: #fff;
+font-size: 14px;
+font-weight: bold;
+}
+
+
+button[onclick^="editPricingEntry"] {
+background-color: #007bff; /* Blue color for the "Edit" button */
+}
+
+button[onclick^="deletePricingEntry"] {
+background-color: #dc3545; 
+}
+button[onclick^="deleteStoryEntry"] {
+background-color: #dc3545; 
+}
+
+
+button:hover {
+opacity: 0.8;
+}
+
+
+button + button {
+margin-left: 8px;
+}
+
+button {
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+color: #fff;
+font-size: 14px;
+font-weight: bold;
+}
+
+/* Edit button */
+button[onclick^="openEditModal"] {
+background-color: #007bff; /* Blue color for the "Edit" button */
+}
+
+/* Hover effect for the "Edit" button */
+button[onclick^="openEditModal"]:hover {
+background-color: #0056b3; /* Darker blue color on hover */
+}
+
+button[type="button"][onclick^="submitEditForm"] {
+background-color: #28a745; /* Green color for the "Save" button */
+}
+
+/* Hover effect for the "Save" button */
+button[type="button"][onclick^="submitEditForm"]:hover {
+background-color: #218838; /* Darker green color on hover */
+}
+
+/* Styling for the "Cancel" button */
+button[type="button"][onclick^="closeEditModal"] {
+background-color: #dc3545; /* Red color for the "Cancel" button */
+}
+
+/* Hover effect for the "Cancel" button */
+button[type="button"][onclick^="closeEditModal"]:hover {
+background-color: #c82333; /* Darker red color on hover */
+}
+
+button[onclick^="deleteRow"] {
+background-color: #dc3545; 
+}
+.popup-modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+justify-content: center;
+align-items: center;
+}
+
+.popup-content {
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+text-align: center;
+}
+
+.close-btn {
+margin-top: 10px;
+cursor: pointer;
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+}
+
+.close-btn {
+margin-top: 10px;
+padding: 5px 10px;
+background-color: #0dcf2d;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 200px;
+margin-left: 50px;
+}
+#pagination {
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+#pagination button {
+padding: 8px 16px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+margin: 0 5px;
+}
+
+#pagination button:disabled {
+background-color: #ddd;
+color: #666;
+cursor: not-allowed;
+}
+.close-bt {
+margin-top: 10px;
+cursor: pointer;
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+}
+
+/* Add CSS for the Delete button */
+.delete-btn {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add hover effect for the Delete button */
+.delete-btn:hover {
+  background-color: #ff0000;
+}
+
+/* Add a bottom border for the table cells */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+/* Style the table header */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+   /* Show the sidebar when menu icon is clicked */
+   .show-sidebar .navbar-collapse {
+    display: block !important;
+}
+
+/* styles.css */
+
+.navbar-nav .nav-item .nav-link {
+/* Your custom styles for regular links */
+color: #f1efef; /* Customize the color */
+/* Add more styles as needed */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+/* Your custom styles for active links */
+color:#fff; /* Example: make active links bold */
+/* Add more styles as needed */
+}
+.action-button {
+  width: 80px;
+  border: none;
+  cursor: pointer;
+font-size: 11px;
+  border-radius: 5px;
+  height: 40px;
+  margin: 5px;
+  background-color: #007bff;
+}
+.modal-close-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-close-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+.edit-button {
+  background-color: #007bff; /* Blue color */
+ 
+}
+
+.add-album-button {
+  background-color: #28a745; /* Green color */
+
+}
+
+.pagination-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #2980b9;
+}
+
+#AddAlbum {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height:300px;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Style the button */
+button[type="submit"] {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+}
+
+/* Change background color on hover */
+button[type="submit"]:hover {
+  background-color: #0056b3; /* New background color on hover */
+}
+
+/* Additional mobile styles for other sections as needed */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjust as needed */
+    }
+
+    .navbar-brand img {
+        width: 3120px; /* Adjust the logo size */
+        height: auto;
+    }
+
+    .links{
+      background-color: #040504;
+    }
+    .heading {
+        font-size: 18px; /* Adjust as needed */
+    }
+
+    .logout {
+        margin-left: auto;
+    }
+
+    .sidebar {
+        display: none; /* Hide the sidebar */
+    }
+
+    .content-section {
+        padding: 10px; /* Adjust spacing */
+    }
+
+    .navbar-toggler {
+        display: block !important;
+    }
+
+    /* Show the navbar collapse when menu icon is clicked */
+    .show-navbar-collapse .navbar-collapse {
+        display: block !important;
+    }
+
+    /* styles.css */
+
+.navbar-toggler-icon {
+/* Your custom styles for the navbar toggler icon */
+background-color: #f1f0f0; /* Change the background color */
+border: 1px solid #fff; 
+color:#fff;/* Add a border */
+width: 30px; /* Adjust width */
+height: 3px; /* Adjust height */
+display: inline-block; /* Display as a block */
+margin-top: 5px; /* Add margin for spacing */
+}
+
+h1 {
+font-size: 24px; /* Adjust the font size for smaller screens */
+margin-top: 20px; /* Adjust the margin for smaller screens */
+}
+
+}
+
+
+
