@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.graph p{
+  text-align: justify;
+
+}
+
+.span{
+  text-align: justify;
+}
+.navbar{
+    color: white;
+}
+.navbar-nav{
+    margin-right: 50px;
+}
+.nav-item .nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img-fluid{
+    width: 19%;
+    margin-left: 100px;
+}
+/* Add this CSS to your existing styles or style tag */
+.nav-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+    border: none;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid #000;
+}
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    background-color: #f4f6f7;
+    border-top: 1px solid #dfe5e8;
+    line-height: 43px;
+}
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-menu li:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-left: 3px solid #000;
+}
+
+.font h4{
+    font-family: 'Playfair Display', serif;
+    color: #dd0505;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 90px;
+}
+
+.right{
+    background-color: #a3a1a1;
+}
+.box{
+    color: #7e7e7e;
+    margin: 0px;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 100;
+    padding: 60px 80px;
+    border: 1px solid #e9edf0;
+    background-color: transparent;
+    position: relative;
+    box-sizing: border-box;
+    border:1px solid #7e7e7e;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.box p{
+  text-align: justify;
+}
+
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
+}
+
+
+.leftu{
+    width: 100%;
+    line-height: 25px;
+    font-size: 16px;
+}
+.leftu p{
+    margin-left:42px ;
+    font-weight: normal;
+    text-align: justify;
+}
+.rightu img{
+    margin-left: 27px;
+
+
+}
+
+strong{
+    color:#7e7e7e;
+}
+.read-more-button{
+    width: 250px;
+    margin-left: 50px;
+    color:#7e7e7e;
+}
+
+.read-more-button:hover {
+    background-color:#0a0a0a; 
+    color:#fff;
+  }
+
+  .para{
+    width:350px;
+    padding-left: 50px;
+  }
+
+  p{
+    color:#7e7e7e;
+  }
+ .para  a{
+    text-decoration: none;
+  }
+
+  .row h4{
+    font-family: 'Playfair Display', serif;
+    color: #dd0505;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 90px;
+    padding-left: 50px;
+  }
+  .first{
+    margin-left: 30px;
+  }
+
+  .second{
+    margin-left: 30px;
+  }
+
+  .third{
+    margin-left: 30px;
+  }
+
+  /* Styles for the overlay */
+.carousel-image {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.6s ease; 
+}
+
+/* Styles for the icon */
+.overlay i {
+    font-size: 30px;
+    color: white;
+    background-color: #000;
+    padding: 5px 15px;
+}
+
+/* Styles for the text */
+.overlay .text {
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Styles for showing the overlay on hover */
+.carousel-image:hover .overlay {
+    opacity: 1;
+}
+.carousel-image:hover .image {
+    opacity: 0.4; 
+}
+
+.line{
+    color: #3d3950;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-size: 24px;
+    padding-left: 55px;
+    width: 1000px;
+}
+
+.symbol{
+    display: flex;
+}
+
+.email{
+    display: flex;
+}
+
+.headset{
+    display: flex;
+}   
+
+.col-md-6.loc li {
+    list-style: none; 
+    text-decoration: none; 
+    padding-left: 30px;
+    width:300px;
+}
+
+.col-md-6.loc li a {
+    text-decoration: none; 
+   
+}
+.fa-envelope{
+    margin-top: 10px;
+}
+
+.fa-whatsapp:hover {
+    color: #25D366; /* Change the color to your desired hover color */
+    cursor: pointer;
+}
+
+.fa-youtube:hover {
+    color: #FF0000; /* Change the color to your desired hover color */
+    cursor: pointer;
+}
+
+.fa-facebook-f:hover{
+    color: #3b5998; /* Change the color to your desired hover color */
+    cursor: pointer;
+}
+
+.fa-instagram:hover {
+    color:#FF0000;
+}
+
+.iconss{
+    padding-left: 100px;
+    width: 200px;
+    margin-top: 20px;
+    
+}
+
+.style{
+    padding-left: 60px;
+}
+
+/* Your existing CSS styles */
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .img-fluid {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .navbar-nav {
+      margin-right: 0;
+    }
+  
+    .container-fluid.full {
+      margin-top: 20px;
+    }
+  
+    .col-md-6.left {
+      width: 100%;
+      float: none;
+    }
+  
+    .col-md-6.right {
+      float: none;
+      width: 100%;
+      background-color: #f7f4f4;
+    }
+  
+    .rightu img {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  
+    .leftu,
+    .rightu,
+    .box {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .box {
+      padding: 20px;
+    }
+  
+    .row.images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .col-md-2 {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .para,
+    .logo {
+      text-align: center;
+    }
+  
+    .iconss {
+      padding-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .style {
+      padding-left: 0;
+    }
+  
+    .line {
+      padding-left: 20px;
+      width: auto;
+    }
+  
+    .col-md-6.loc li {
+      padding-left: 0;
+    }
+  
+    .fa-envelope {
+      margin-top: 0;
+    }
+  
+    /* Additional mobile styles */
+    .font h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  
+    .box {
+      padding: 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  
+    .col-6 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .row h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  
+    .para {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .col-md-3 {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 15px;
+    }
+  
+    .rightu img {
+      margin-left: 0;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .col-md-6.loc li {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .iconss {
+      padding-left: 0;
+      width: 100%;
+    }
+  
+    .line {
+      padding-left: 15px;
+      width: 100%;
+    }
+  
+    .style {
+      padding-left: 15px;
+    }
+  
+    .read-more-button {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 568px) {
+
+    .navbar-nav {
+      flex-direction: column;
+      margin-right: 0;
+  }
+
+  .navbar-toggler {
+      margin-right: 15px; 
+  }
+
+  .img-fluid {
+      width: 5%;
+      margin-left: 0;
+  }
+
+  .navbar-collapse {
+      position: relative;
+  }
+
+  .navbar-nav.ms-auto {
+      margin: 0;
+  }
+
+  .nav-item {
+      position: relative;
+  }
+
+  .nav-item:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      position: static;
+      width: 100%; 
+  }
+
+  .dropdown-menu {
+      position: static;
+      opacity: 1;
+      display: none;
+      width: 100%;
+  }
+
+  .dropdown-menu li {
+      border-top: none; /* Remove the border between dropdown items */
+  }
+
+  .dropdown-menu li a {
+      padding-left: 20px; /* Add a bit more padding for dropdown items */
+  }
+
+  .nav-item.dropdown.active > .nav-link,
+  .nav-item.dropdown:hover > .nav-link {
+      background-color: #f4f6f7;
+      color: #007bff;
+  }
+
+  /* Adjust the background color of the "More" link to match the highlight style */
+  .dropdown-menu .back-button a:hover {
+      background-color: #f4f6f7;
+  }
+
+
+.caret-down-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 35px;
+  vertical-align: middle;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black; /* You can change the color to match your design */
+}
+
+.text-container{
+  display: none;
+}
+.pad15 .carousel-image{
+  width: 100%;
+}
+.lastfooter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0; 
+  background-color: #ededed;
+  color: #000;
+}
+}

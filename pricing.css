@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    color: white;
+}
+.navbar-nav{
+    margin-right: 50px;
+}
+.nav-item .nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img-fluid{
+    width: 19%;
+    margin-left: 100px;
+}
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+    border: none;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid #000;
+}
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    background-color: #f4f6f7;
+    border-top: 1px solid #dfe5e8;
+    line-height: 43px;
+}
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-menu li:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-left: 3px solid #000;
+}
+.portfolio {
+    background-color: #ededed;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -82px;
+}
+
+.portfolio h3{
+    padding-top: 45px;
+    padding-left: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.anchor{
+    display: flex;
+    margin-top: 48px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.anchor i{
+    padding-top: 5px;
+}
+.anchor a{
+    text-decoration: none;
+    color: #000;
+}
+.active{
+    border-bottom: 2px solid #000;
+    padding-bottom: 7px;
+}
+.incontainer{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 80px;
+    
+}
+.incontainer img{
+    width: 400px;
+    height: 400px;
+}
+.incontainer .pricetext{
+    padding-left: 60px;
+    padding-top: 25px;
+    line-height: 30px;
+}
+.incontainer .pricetext a{
+    text-decoration: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 80px;
+}
+.heading h3{
+    padding-bottom: 10px;
+}
+.love{
+    text-align: center;
+    margin: 55px auto;
+}
+.footer{
+    height: 450px;
+}
+.footerimg{
+    margin-top: 29px;
+
+}
+.footerh3{
+    border-bottom: 1px solid rgb(45, 43, 43);
+    margin-top: 55px;
+    color: #0090D2;
+    padding-bottom: 19px;
+}
+.footerpara{
+    font-size: 13px;
+    text-align: justify;
+    font-family: Verdana, sans-serif;
+    font-weight: 300;
+}
+.socialfooter{
+    cursor: pointer;
+    color: #000;
+}
+.footerservice{
+    list-style: none;
+    padding-left: 0px;
+}
+.footerservice li{
+    padding: 10px;
+}
+.footerservice p{
+    font-size: 14px;
+}
+.footerservice h5{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footerservice a{
+    text-decoration: none;
+    color: #000;
+}
+.footerservice a:hover{
+    color: #e9d607;
+}
+.fa-angle-right{
+    font-size: 10px;
+}
+
+.lastfooter{
+    padding: 25px;
+}
+.socialfooter a{
+    color: #000;
+    font-size: 25px;
+}
+.socialfooter a:hover{
+    opacity: 0.5;
+}
+.fa-instagram{
+    color:red;
+}
+.fa-youtube{
+    color:red;
+}
+.fa-whatsapp{
+    color:green
+}
+
+.fa-facebook{
+    color:rgb(51, 15, 211)
+}
+
+.fa-twitter{
+    color: #0090D2;
+}
+
+.text{
+    color: #7e7e7e;
+    margin-top: 50px;
+}
+
+
+
+    
+@media (max-width: 568px) {
+
+    .navbar-nav {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        margin-right: 15px; /* Add margin between logo and hamburger icon */
+    }
+
+    .img-fluid {
+        width: 20%;
+        margin-left: 0;
+    }
+
+    .navbar-collapse {
+        position: relative;
+    }
+
+    .navbar-nav.ms-auto {
+        margin: 0;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        position: static;
+        width: 100%; /* Make the dropdown menu full width */
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown-menu li {
+        border-top: none; /* Remove the border between dropdown items */
+    }
+
+    .dropdown-menu li a {
+        padding-left: 20px; /* Add a bit more padding for dropdown items */
+    }
+
+    .nav-item.dropdown.active > .nav-link,
+    .nav-item.dropdown:hover > .nav-link {
+        background-color: #f4f6f7;
+        color: #007bff;
+    }
+
+    /* Adjust the background color of the "More" link to match the highlight style */
+    .dropdown-menu .back-button a:hover {
+        background-color: #f4f6f7;
+    }
+
+
+.caret-down-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 35px;
+    vertical-align: middle;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; /* You can change the color to match your design */
+}
+.MultiCarousel .MultiCarousel-inner .item {
+    flex: 0 0 100%;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    padding-right: 0;
+    margin-left: 0;
+    
+  }
+
+  
+  /* Optional: Adjust the carousel slide speed */
+  .MultiCarousel-inner {
+    transition: all 0.5s ease;
+    width: 400%;
+  }
+  
+.text-container{
+    display: none;
+}
+.pad15 .carousel-image{
+    width: 100%;
+}
+
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.to-top{
+    background-color: #989595;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 45px;
+    bottom: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.to-top.active{
+    bottom: 60px;
+    opacity: 1;
+    pointer-events:all;
+}

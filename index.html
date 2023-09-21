@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditaPhotography</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("shareIcon").addEventListener("click", function() {
+                var socialIconsContainer = document.getElementById("socialIconsContainer");
+                socialIconsContainer.style.display = "block";
+            });
+            document.getElementById("shareIcon2").addEventListener("click", function() {
+        var socialIconsContainer = document.getElementById("socialIconsContainer2");
+        socialIconsContainer.style.display = "block";
+    });
+    document.getElementById("shareIcon3").addEventListener("click", function() {
+        var socialIconsContainer = document.getElementById("socialIconsContainer3");
+        socialIconsContainer.style.display = "block";
+    });
+    document.getElementById("shareIcon4").addEventListener("click", function() {
+        var socialIconsContainer = document.getElementById("socialIconsContainer4");
+        socialIconsContainer.style.display = "block";
+    });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid fixed">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-sm navbar-white  navbar-transition fixed-top" style="background-color: white;" style="top:10;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">
+                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar" >
+                        <ul class="navbar-nav ms-auto " >
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
+                                <ul class="dropdown-menu">
+                                  
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="portfolio.html">More</a></li>
+                                </ul>
+                            </li>
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="portfolio.html">More</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About dob</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="stories.html">Stories</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+
+        </div>
+    </div><br><br><br><br><br>
+
+    <!-- Slider  -->
+    <div class="slider" id="slider1">
+        <div style="background-image:url(images/1L9A0467.jpg)"></div>
+        <div style="background-image:url(images/1L9A0011.jpg)"></div>
+        <div style="background-image:url(images/1L9A0138.jpg)"></div>
+        <div style="background-image:url(images/1L9A9412.jpg)"></div>
+      
+        <!-- The Arrows -->
+        <i class="left arrows" style="z-index:2; position:absolute; color:white;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+        <i class="right arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+
+      </div>
+
+        <!-- Text container inside the slider -->
+        <div class="text-container">
+            <p class="animated-text">Today's Moments are Tomorrow's Memory</p>
+            <p><a href="index.html"><button>Freeze the moment</button></a></p>
+          </div>
+
+
+      
+<div class="container">
+    <div class="heading">
+        <h2>MATERNITY, BABY AND CHILD PHOTOGRAPHER IN HYDERABAD</h2>
+       
+    </div>
+    <div class="head">
+        <h2>OUR PORTFOLIO</h2>
+        <p>Through pictures, we can bring memories to life. Life is full of special moments that we would all love to revisit. Throughout my career as maternity and baby photographer at Edita photography, I have captured thousands of these moments which are here, being shared with the world for everyone to come and experience these moments together.</p>
+    </div>
+</div>
+
+<!--Multiple Carosal-->
+<div class="container">
+	<div class="row">
+        <div class="MultiCarousel" data-items="3,3,3,3" data-slide="1" id="MultiCarousel" data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A1177.jpg" alt="Image 2" class="image" >
+                            <div class="overlay">
+                             
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">MATERNITY PHOTOSESSION</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A1203.jpg" alt="Image 2" class="image" width="100%" height="100%">
+                            <div class="overlay">
+                             
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">MATERNITY PHOTOSESSION</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A0797.jpg" alt="Image 2" class="image" width="100%" height="100%">
+                            <div class="overlay">
+                             
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">MATERNITY PHOTOSESSION</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A0518.jpg" alt="Image 2" class="image" width="100%" height="100%">
+                            <div class="overlay">
+                                <div class="iconedit">
+                                    <a href="sitterphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">SITTER PHOTOSESSION</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A2762.jpg" alt="Image 2" class="image" width="100%" height="100%">
+                            <div class="overlay">
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A9216.jpg" alt="Image 2" class="image">
+                            <div class="overlay">
+                                
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A7240.JPG" alt="Image 2" class="image">
+                            <div class="overlay">
+                                
+                                <div class="iconedit">
+                                    <a href="maternityphoto.html"><i class="material-icons">local_see</i></a>
+                                   <i id="shareIcon3" class="fa-sharp fa-solid fa-share-nodes"></i>
+                                   </div>
+                                   <div id="socialIconsContainer3">
+                                       <a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                       <a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a>
+                                       <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                       <a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a>
+                                   </div>
+                                <p class="text">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+            <button class="btn btn-primary leftLst"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn btn-primary rightLst"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+	</div>
+</div>
+
+<!-- Bootstrap caurosal -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/dob1 (1).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/dob1 (2).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/1L9A0032 (3).jpg" class="d-block w-100" alt="...">
+      </div>
+    
+      <div class="carousel-item">
+        <img src="images/dob1 (5).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/dob1 (6).jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/dob1 (7).JPG" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container-fluid service">
+    <h1 class="edita">DAY OF BORN PHOTOGRAPHY SERVICES</h1>
+    <div class="container">
+       
+        <a href="service.html""  class="btn btn-shutter btn-shutter-black">VIEW ALL SERVICE</a>
+        <p>Magical  maternity  photoshoot, newborn photography , baby photoshoot, toddler and child portfolio at Edita photography.</p>
+        <p>Inspired by natural surroundings I bring in the colors, backdrops, materials, furniture and ambience, reflecting the same. You will find my photos to be more candid, deep and vintage like with solo pieces of wooden barrels, mini baby cribs, swing chairs, rustic rugs, pottery and flower fences.</p>
+    </div>
+
+
+<div class="carousal2">
+    <div class="row">
+        <div class="MultiCarousel" data-items="3,3,3,3" data-slide="1" id="MultiCarousel" data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A9254.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                              
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A2784.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                               
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A0597.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                               <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A0755.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                                
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A0797.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                              
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A5245.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                              
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="pad15">
+                        <div class="carousel-image">
+                            <img src="images/1L9A5928.jpg" alt="Image 2" class="image">
+                            <div class="overlay1">
+                              
+                                <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
+                                <p class="texting">Image Description</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+            <button class="btn btn-primary leftLst"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn btn-primary rightLst"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div><br>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/1L9A0638.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/1L9A3142.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/1L9A5269.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <i class="fas fa-chevron-left"></i> 
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i>
+        <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+
+
+<div class="container flex" style="margin-top: -130px;">
+    <div class="row video">
+        <div class="col-lg-6">
+            <h1>ABOUT dob</h1>
+            <div class="line">
+
+            </div>
+            <p class="about">“Which of my photographs is my favourite? The one I’m going to take tomorrow.” – Imogen Cunningham</p>
+        </div>
+        <div class="col-lg-6">
+            <p class="editapara">I am Edita Paluri, a Lithuanian maternity and baby photographer, settled in one of the finest Indian cities – Pune. I am just another hard working, creative mommy, whose hobby turned into an exciting journey and a fascinating career – Edita photography.</p>
+
+            <p class="editapara">My inspiration is Life – the very beginning of it in the womb and beautiful flourishing of each birth. My passion – to capture this magical proof of continuity via clicks of amazing Moms, fragile newborns and champion children.</p>
+
+            <p class="editapara">The thing I love most about my Job – wonderful people I meet every day, who are the most important, creative and combining elements of each photo-shoot and my personal success.</p>
+
+            <p class="editapara">Cheers to you all!</p>
+
+            <a href="indexborn.html"  class="btn btn-shutter btn-shutter-black">Read More</a>
+        </div>
+    </div>
+
+
+    <h3 class="edita">LATEST dob PHOTOGRAPHY WORK ON INSTAGRAM</h3>
+    <div class="row loadmorefunction">
+        <div class="col-md-4">
+            <div class="card">
+                <a href=""><img src="images/1L9A0086.jpg" alt="Avatar" style="width:100%" height="100%"></a>
+              </div>
+        </div>
+ 
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A1177.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A6312.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="position: relative;">
+                <div style="position: absolute; top: 10px; right: 10px; color: rgb(227, 227, 232);">
+                    <i class="fa fa-file" style="font-size: 25px;"></i>
+                </div>
+                <img src="images/1L9A1958.jpg" alt="Avatar" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+        
+        
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A0023.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A6265.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A3796.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A6140.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/1L9A9628.jpg" alt="Avatar" style="width:100%" height="100%">
+              </div>
+        </div>
+  </div>
+
+            <div class="btns">
+                <button class="load">Load More...</button> 
+                <a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA==">
+                    <button class="follow"><i class="fa-brands fa-instagram">
+                    </i>Follow us Instagram</button></a>
+            </div>
+         
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const totalImages = $(".loadmorefunction > .col-md-4").length;
+        const imagesToShowInitially = 6;
+        const imagesPerLoad = totalImages - imagesToShowInitially;
+        let currentImages = imagesToShowInitially;
+
+        $(".loadmorefunction > .col-md-4:gt(" + (currentImages - 1) + ")").hide();
+
+        $(".load").click(function () {
+            const $hiddenImages = $(".loadmorefunction > .col-md-4:hidden");
+
+            $hiddenImages.slice(0, imagesPerLoad).show();
+            currentImages += imagesPerLoad;
+
+            if ($hiddenImages.length <= 0) {
+                $(".load").hide();
+            }
+        });
+    });
+</script>
+
+<!--FAQ-->
+<div class="container">
+    <h1>FAQ</h1>
+    <div class="row">
+    <div class="col-lg-8 accordionhead">
+        <div id="accordion" class="accordion-container">
+            <h4 class="accordion-title">How to book an appointment?</h4>
+            <div class="accordion-content">
+              <p>You may schedule an appointment with us by calling our studio on +919573796339 or you can fill the adjacent appointment form to request an appointment online one of our team members will get in touch with you.</p>
+            </div>
+            <h4 class="accordion-title">What are maternity and baby photo shoot packages?</h4>
+            <div class="accordion-content">
+              <p>You can find our range of maternity, newborn, baby, child photography pricing & packages here. The photo shoot packages start from INR 25 000. If you have a specific requirement you’d like to discuss, we’re more than happy to help you find the most suitable and cost effective photo session for your needs, just contact us.</p>
+            </div>
+            <h4 class="accordion-title">How to book a photo session?</h4>
+            <div class="accordion-content">
+              <p>To book a date for a photo session, please call +919573796339to find a date which is available as well as suitable for you. To confirm the date an advance payment is required. Once these formalities are done, the photographer will consult you about clothing and other details. The consultation can be done in person at the studio or over the phone.</p>
+            </div>
+        <h4 class="accordion-title">How many days in advance should i book my photo session?</h4>
+        <div class="accordion-content">
+          <p>We suggest booking two weeks in advance. We try our best to accommodate any last minute bookings, but to ensure you get your preferred time and date, we recommend booking 4-5 weeks in advance.</p>
+        </div>
+          </div>
+    </div>
+   
+</div>
+</div>
+
+
+<!--Stories-->
+<div class="container">
+    <h2>OUR STORIES</h2>
+    <div class="row rowstory">
+        <div class="col-md-4">
+            <div class="card c2">
+                <div class="carousel-image1"1>
+                    <img src="images/123.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <!-- <div class="overlay">
+                         <a href="contactus.html"><i class="fa-sharp fa-solid fa-share-nodes"></i></a> 
+                          
+                    </div> -->
+                </div>
+                
+                <div class="container " style="width: 360px;">
+                  <h4 class="story"><b>AMAZING CLOSE UP PHOTOS OF NEWBORN BABIES</b></h4> 
+                  <p>Book your newborn photo shoot now! Please check our latest work on Instagram.</p>
+                  <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                  <a href="indexborn.html"  class="btn btn-shutter btn-shutter-black">Read More</a>
+                </div>
+              </div>
+        </div>
+ 
+        <div class="col-md-4">
+            <div class="card c2">
+                <div class="carousel-image1">
+                    <img src="images/1234.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <!-- <div class="overlay">
+                        <i class="fa-sharp fa-solid fa-share-nodes"></i> 
+                      <p class="texts">Image Description</p> 
+                    </div> -->
+                </div>
+                <div class="container">
+                    <h4 class="story1"><b>AN OUTSTANDING FITNESS PHOTO SHOOT THAT YOU’LL LOVE</b></h4> 
+                    <p>We are happy to announce that we are starting fitness photo shoots in Pune in collaboration with Adiaesthetics. I started…</p> 
+
+                    <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                    <a href="indexborn.html"  class="btn btn-shutter btn-shutter-black">Read More</a>
+                  </div>
+              </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card c2">
+                <div class="carousel-image1">
+                    <img src="images/22222.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <!-- <div class="overlay">
+                        <i class="fa-sharp fa-solid fa-share-nodes"></i> 
+                    <p class="texts">Image Description</p>  
+                    </div> -->
+                </div>
+              
+                  <div class="container">
+                    <h4 class="story2"><b>OUR  PHOTOSTUDIO THAT WILL MAKEYOU FEEL LIKEHOME</b></h4> 
+                    <p>Our photo studio tour will give you a clear image of what to expect when you get there.</p> 
+
+                    <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                    <a href="indexborn.html"  class="btn btn-shutter btn-shutter-black">Read More</a>
+                  </div>
+
+              </div>
+        </div>
+        </div>
+</div>
+
+
+
+
+<!--Single Line-->
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span>Ready to shoot? Still curious? We’re more than happy to help you!</span>
+            </div>
+            <div class="col-lg-4">
+                <a href="requestappoint.html">
+                <button class="btn btn-outline-secondary btn-sm">REQUEST AN APPOINTMENT</button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid footer" style="margin-top: -47px; color: black;">
+    <div class="container">
+        <div class="row" style="color: #000;"> 
+            <div class="col-md-4">
+                <h3 class="footerh3">DayOfBorn PHOTOGRAPHY</h3>
+                <P class="footerpara">You are warmly welcomed in our maternity & kids atelier in Bavdhan, green and peaceful suburbs of Pune, perfectly suited for candid and happy clicks!</P>
+                <div class="socialfooter">
+                    <span><a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a></span>&nbsp;
+                    <span><a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a></span>&nbsp;
+                    <span><a href="https://youtube.com/@dayofborndob3440"><i class="fa fa-youtube"></i></a></span>&nbsp;
+                    <span><a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="footerh3">CONTACT INFO</h3>
+                <ul class="footerservice">
+                    <li><a href="#"><p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vignanpuri colony, Mythri Nagar, Kukakpally</p></a></li>
+                    <li><a href="tel:9573796339"><p><i class="fa fa-phone"></i>&nbsp;&nbsp;9573796339</p></a></li>
+                    <li><a href="mailto:dayofborn@gmail.com"><p><i class="fa fa-envelope"></i>&nbsp;&nbsp;dayofborn@gmail.com</p></a></li>
+                    <li><a href="www.dayofborn.com"><p><i class="fa fa-globe"></i>&nbsp;&nbsp;www.dayofborn.com</p></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="footerh3">WHAT PEOPLE SAY</h3>
+                <img src="images/Logo web.png" alt="" width="350px" height="100px">
+                <p>DayOfBorn photography</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  <!--LAST FOOTER -->
+  <div class="container-fluid" style="background-color: #ededed; color: #000;">
+    <div class="container">
+      <div class="row lastfooter">
+        <div class="col-sm-6">
+          <p>2012 - 2023 © Copyrights DayOfBorn Photography | Hyderabad |  Privacy Policy  |  <a href="sitemap.html">sitemap</a></p>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  <a href="#" class="to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/accordion-menu2.js"></script>
+  
+  
+  
+  
+  <script>
+  $(function () {
+  $(".accordion-btn").on("click", function () {
+  $(this).next(".accordion-list").slideToggle();
+  });
+  });
+  </script>
+  
+  <script>
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", ()=>{
+      if(window.pageYOffset > 100){
+        toTop.classList.add("active");
+      }
+      else{
+        toTop.classList.remove("active");
+      }
+    })
+  </script>
+
+
+<script>
+    (function( $ ) {
+      $(document).ready(function() {
+        $('.slider').kenburns({ debug: true });
+
+      });
+    })(jQuery);
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="app.js"></script>
+<script>
+$(document).ready(function() {
+  
+  $("#slider1").sliderResponsive({
+  // Using default everything
+    // slidePause: 5000,
+    // fadeSpeed: 800,
+    // autoPlay: "on",
+    // showArrows: "off", 
+    // hideDots: "off", 
+    // hoverZoom: "on", 
+    // titleBarTop: "off"
+  });
+  
+  $("#slider2").sliderResponsive({
+    fadeSpeed: 300,
+    autoPlay: "off",
+    showArrows: "on",
+    hideDots: "on"
+  });
+  
+  $("#slider3").sliderResponsive({
+    hoverZoom: "off",
+    hideDots: "on"
+  });
+  
+}); 
+</script>
+ 
+
+
+
+<!--FAQ ACCORDION-->
+<script>
+	jQuery(function ($) {
+
+  $(".accordion-content").css("display", "none");
+
+
+  $(".accordion-title").click(function () {
+
+    $(".accordion-title").not(this).removeClass("open");
+
+    $(".accordion-title").not(this).next().slideUp(300);
+
+    $(this).toggleClass("open");
+
+    $(this).next().slideToggle(300);
+  });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+
+
+
+
+
+<!--HAMBERGER-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.querySelector(".menu-icon");
+        const navLinks = document.querySelector(".nav ul");
+
+        menuIcon.addEventListener("click", function () {
+            navLinks.classList.toggle("show");
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+        // Set the number of initially visible images
+        var visibleImages = 6;
+    
+        // Function to handle the "Load More" button click
+        $(".load").on("click", function() {
+            // Select all hidden images and slice the ones we want to show
+            var hiddenImages = $(".hidden");
+            var imagesToShow = hiddenImages.slice(0, visibleImages);
+    
+            // Toggle the visibility of the selected hidden images
+            imagesToShow.toggleClass("hidden");
+    
+            // If there are no more hidden images, hide the "Load More" button
+            if (hiddenImages.length <= visibleImages) {
+                $(".load").hide();
+            }
+        });
+    });
+    </script>
+ 
+ 
+ <script>
+    $(document).ready(function() {
+        // Toggle dropdown on click for responsive mode
+        $('.dropdown-link').on('click', function(e) {
+            e.preventDefault();
+            var $parentDropdown = $(this).parent();
+            var $dropdownMenu = $(this).next('.dropdown-menu');
+    
+            // Close other open dropdowns
+            $('.dropdown-menu').not($dropdownMenu).removeClass('show');
+            $('.dropdown').not($parentDropdown).removeClass('show');
+    
+            // Toggle current dropdown
+            $parentDropdown.toggleClass('show');
+            $dropdownMenu.toggleClass('show');
+        });
+    
+        // Close dropdown on clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.dropdown').length) {
+                $('.dropdown-menu').removeClass('show');
+                $('.dropdown').removeClass('show');
+            }
+        });
+    });
+    </script>
+
+
+
+<script>
+    
+    const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add('navbar-fixed');
+  } else {
+    navbar.classList.remove('navbar-fixed');
+  }
+});
+  
+
+</script>
+
+<script>
+    const shareIcon = document.getElementById('shareIcon3');
+const socialIconsContainer = document.getElementById('socialIconsContainer3');
+const text = document.querySelector('.text');
+
+shareIcon.addEventListener('click', () => {
+  // Toggle the visibility of the social icons and text
+  if (socialIconsContainer.style.display === 'none' || socialIconsContainer.style.display === '') {
+    socialIconsContainer.style.display = 'block';
+    text.style.display = 'block';
+  } else {
+    socialIconsContainer.style.display = 'none';
+    text.style.display = 'none';
+  }
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,922 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    margin-top: 500px;;
+}
+
+.carousal2{
+    height:700px;
+}
+.btn-shutter {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 12px 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    border: 1px solid #000;
+   
+    margin-top: 20px;
+    
+}
+.container .btn.btn-shutter-black {
+    border: 1px solid #000; /* Add or override the border for this specific button */
+}
+
+
+.btn-shutter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: 1px solid #000;
+    transition: left 0.3s ease-in-out; /* Only transition the 'left' property */
+    z-index: -1;
+}
+
+
+.btn-shutter:hover::before {
+    left: 0;
+}
+.container a.btn-shutter:hover {
+    
+    color: white; /* Set the text color to white on hover */
+}
+
+.share{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.texting{
+    text-align: center;
+    /* margin-top: 200px; */
+    margin-left: 100px;
+  }
+
+  .texts{
+    margin-left: 120px;
+  }
+
+  .carousel-image:hover .overlay1 i {
+    display: inline; /* or display: inline-block; depending on your icon element */
+}
+.overlay1 i {
+    display: none;
+    margin-top: 200px;
+    margin-left: 20px;;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#socialIcons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+  
+
+
+.wrapper {
+    margin: 0 10px;
+    position: relative;
+  }
+  .wrapper:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  .kenburns { 
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .kenburns img { /* Avoid flashing */
+    display: none;
+  }
+  .kenburns canvas { /* Make it responsive */
+    width: 100%;
+    height: auto;
+  }
+
+.slider {
+    position: relative;
+  }
+  .text-container {
+    position: absolute;
+    left: 50px;
+    top: 70%;
+    transform: translateY(-70%);
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    z-index: 2;
+    padding-left: 70px;;
+    animation: fadeInOut 3s infinite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+.text-container button{
+    background: none;
+    color: #fff;
+    border-radius: 10px;
+    padding: 2px 10px;
+} 
+  .kenburns{
+    display: flex;
+    background-color: #0090D2;
+  }
+
+.navbar{
+    color: white;
+   
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    transition: padding 0.6s;
+}
+.nav-item .nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img-fluid{
+    width: 19%;
+    margin-left: 100px;
+}
+/* Add this CSS to your existing styles or style tag */
+.nav-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+    border: none;
+   
+}
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid #000;
+}
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    background-color: #f4f6f7;
+    border-top: 1px solid #dfe5e8;
+    line-height: 43px;
+}
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-menu li:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-left: 3px solid #000;
+}
+
+.slider,
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 800px;
+    /* height: 100vh; // If you want fullscreen */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    color: #5bbd72;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    text-shadow: 0 10px 2px #223422;
+    transition: .3s;
+    width: 30px;
+    padding: 10px 13px;
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    line-height: 0;
+    box-sizing: content-box;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > i:hover {
+    background:#fff;
+    background: rgba(255, 255, 255, .8);
+    transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+    transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+    transform: translateY(1px);
+}
+
+.slider:hover > div {
+    transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+.heading{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 29px;
+}
+.covid{
+    /* color: red; */
+    padding-top: 20px;
+    font-size: 22px;
+}
+.head{
+    color: #4d4c4c;
+    margin-top: 30px;
+}
+.head h2{
+    margin-top: 40px;
+}
+.head p{
+    text-align: justify;
+}
+.iconedit{
+    display: flex;
+}
+.iconedit i{
+    margin-top: 190px;
+    border-radius: 120px;
+    padding: 25px;
+}
+#socialIconsContainer {
+    display: none;
+}
+#socialIconsContainer i{
+    font-size: 23px;
+    border-radius: 50px;
+    background: none;
+    
+}
+#socialIconsContainer .fa-instagram{
+    color:red;
+}
+#socialIconsContainer .fa-youtube{
+    color:red;
+}
+#socialIconsContainer .fa-whatsapp{
+    color:green
+}
+
+#socialIconsContainer .fa-facebook{
+    color:rgb(51, 15, 211)
+}
+
+.MultiCarousel {
+     float: left; 
+     overflow: hidden; 
+     padding: 15px; 
+     width: 100%; 
+     position:relative;
+}
+.MultiCarousel .MultiCarousel-inner { 
+        transition: 1s ease all; 
+        float: left; 
+}
+.MultiCarousel .MultiCarousel-inner .item { 
+    float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item > div { 
+            text-align: center; 
+            padding:10px; 
+            margin:10px; 
+            /* color:#ed1111; */
+        }
+        
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+    position:absolute; 
+    top:calc(50% - 20px); 
+    padding: 17px;
+    background-color: #6c6b6b;
+    color: #fff;
+    border: none;
+}
+.MultiCarousel .leftLst { left:0; }
+
+.MultiCarousel .rightLst { right:0; }
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { 
+        pointer-events: none; 
+        background:#000;
+        color: #fff; 
+}
+
+.carousel-image {
+    position: relative;
+    display: inline-block;
+}
+.carousel-image .image{
+    width: 333px;
+    height: 500px;
+} 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.6s ease; 
+}
+
+/* Styles for the icon */
+.overlay i {
+    font-size: 20px;
+    padding: 5px 15px;
+    margin-left:30px;
+}
+
+
+/* Styles for the text */
+.overlay .text {
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+.overlay1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     margin-top: 200px;
+    cursor: pointer;
+    transition: opacity 0.6s ease; 
+    margin-left: 20px;
+}
+
+.overlay1 .texting {
+    display: none;
+}
+
+.carousel-image:hover .overlay1 .texting {
+    display: block; /* or any other suitable display property */
+}
+
+
+
+/* Styles for the icon */
+
+
+
+/* Styles for the text */
+.overlay1 .texting {
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+   margin-right: 30px;
+
+}
+/* Styles for showing the overlay on hover */
+.carousel-image:hover .overlay {
+    opacity: 1;
+}
+.carousel-image:hover .image {
+    opacity: 0.4; 
+}
+
+
+.service{
+    background-color: #ddd;
+    height: 900px;
+}
+/* .service button{
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 20px;
+}
+.service button:hover{
+    background-color: #464545;
+    color: #fff;
+} */
+.edita{
+    text-align: center;
+    padding: 50px;
+}
+.line{
+    width: 40px;
+    height: 2px;
+    background-color: #000;
+}
+
+.video{
+    margin-top: 500px;;
+}
+.video h1{
+   
+    font-size: 22px;
+}
+.video .line{
+    margin-bottom: 50px;
+}
+.video .about{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ccc;
+}
+.video .editapara{
+ 
+    font-size: 14px;
+}
+.video button{
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid #ddd;
+    color: #ccc;
+}
+.row .col-md-4 .card{
+    Width: 333px;
+    Height: 500px;
+    margin: 8px;
+    border: none;
+}   
+.container .btns{
+    text-align: center;
+    margin:15px auto;
+}
+.container .btns .load{
+    background-color: #181f22;
+    color: #fff;
+    padding:5px 15px;
+    border: none;
+    border-radius: 12px;
+}
+.container .btns .follow{
+    background-color: rgb(58, 18, 204);
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 12px;
+}
+/*ACCORDION FAQ*/
+.accordion-container .accordion-title {
+    position: relative;
+    margin: 20px;
+    padding: 0.625em 0.625em 0.625em 2em;
+    background-color: #1f1e1e;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .accordion-container .accordion-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    width: 15px;
+    height: 2px;
+    transform: rotate(90deg);
+    background: #fff;
+    transition: all .3s ease-in-out;
+  }
+  
+  .accordion-container .accordion-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .accordion-container .accordion-title.open::before {
+    transform: rotate(180deg);
+  }
+  
+  .accordion-container .accordion-title.open::after {
+    opacity: 0;
+  }
+  
+  .accordion-content {
+    padding-left: 2.3125em;
+    border-bottom: 1px dashed black;
+    margin: 10px;
+    text-align: justify;
+  }
+  
+  /* CSS for Demo */
+  .accordion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 370px;
+  }
+
+  /*Stories*/
+/* .rowstory{
+    width: 90%;
+    margin: auto;
+} */
+  .row .col-md-4 .c2{
+    height: 600px;
+    margin: 8px;
+    background-color: #ddd;
+    border: none;
+}
+.c2 .overlay i{
+    margin-left: 140px;
+  
+    font-size: 26px;
+    color: green;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top:120px;
+} 
+/* .c2 button{
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 50px;
+} */
+.story{
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.story1{
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.story2{
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.footer{
+    height: 450px;
+}
+.footerimg{
+    margin-top: 29px;
+}
+.footerh3{
+    border-bottom: 1px solid rgb(45, 43, 43);
+    margin-top: 55px;
+    color: #0090D2;
+    padding-bottom: 19px;
+}
+.footerpara{
+    font-size: 13px;
+    text-align: justify;
+    font-family: Verdana, sans-serif;
+    font-weight: 300;
+}
+.socialfooter{
+    cursor: pointer;
+    color: #000;
+}
+.footerservice{
+    list-style: none;
+    padding-left: 0px;
+}
+.footerservice li{
+    padding: 10px;
+}
+.footerservice p{
+    font-size: 14px;
+}
+.footerservice h5{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footerservice a{
+    text-decoration: none;
+    color: #000;
+}
+.footerservice a:hover{
+    color: #e9d607;
+}
+.fa-angle-right{
+    font-size: 10px;
+}
+.fa-map-marker , .fa-phone , .fa-envelope , .fa-globe{
+    color: rgb(44, 165, 159);
+}
+.lastfooter{
+    padding: 25px;
+}
+.socialfooter a{
+    color: #000;
+    font-size: 25px;
+}
+.socialfooter a:hover{
+    opacity: 0.5;
+}
+/* Style the "local_see" icon */
+.material-icons {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: rgb(60, 60, 202);
+    margin-top: 200px; /* Change the color to your desired color */
+  }
+  
+  /* Style the "shareIcon3" icon by ID */
+  #shareIcon3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: green; /* Change the color to your desired color */
+  }
+  
+  /* Style the social icons */
+  .social-icon {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #ff6600; /* Change the color to your desired color */
+  }
+  
+  /* You can style each social icon individually if needed */
+  .fa-facebook {
+    color: #1877f2; /* Facebook color */
+  }
+  
+  .fa-youtube {
+    color: #ff0000; /* YouTube color */
+  }
+  
+  .fa-instagram {
+    color: #bc2a8d; /* Instagram color */
+  }
+  
+  .fa-whatsapp {
+    color: #25d366; /* WhatsApp color */
+  }
+  
+.to-top{
+    background-color: #989595;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 45px;
+    bottom: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.to-top.active{
+    bottom: 60px;
+    opacity: 1;
+    pointer-events:all;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.MultiCarousel-inner .item {
+    display: block;
+    width: 100%; /* Set the width of the carousel items */
+    overflow: hidden; 
+    width: 100%;/* Hide the overflow to show only one image at a time */
+  }
+
+  .navbar-transition {
+    transition: top 0.3s ease-in-out;
+  }
+  
+
+  .navbar .navbar-fixed{
+    transition:1s;
+    height: 100vh;
+  }
+
+#carouselExampleControls{
+    display: none;
+  }  
+
+ #carouselExampleIndicators{
+    display:none;
+ }
+@media (max-width: 568px) {
+.slider,
+    .slider > div {
+        height: 400px; 
+        width: 100%;/* Let the height adjust to the image content */
+    }
+    .navbar-nav {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        margin-right: 15px; 
+    }
+
+    .img-fluid {
+        width: 5%;
+        margin-left: 0;
+    }
+
+    .navbar-collapse {
+        position: relative;
+    }
+
+    .navbar-nav.ms-auto {
+        margin: 0;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        position: static;
+        width: 100%; 
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown-menu li {
+        border-top: none; /* Remove the border between dropdown items */
+    }
+
+    .dropdown-menu li a {
+        padding-left: 20px; /* Add a bit more padding for dropdown items */
+    }
+
+    .nav-item.dropdown.active > .nav-link,
+    .nav-item.dropdown:hover > .nav-link {
+        background-color: #f4f6f7;
+        color: #007bff;
+    }
+
+    /* Adjust the background color of the "More" link to match the highlight style */
+    .dropdown-menu .back-button a:hover {
+        background-color: #f4f6f7;
+    }
+
+
+.caret-down-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 35px;
+    vertical-align: middle;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; /* You can change the color to match your design */
+}
+
+.text-container{
+    display: none;
+}
+.pad15 .carousel-image{
+    width: 100%;
+}
+.lastfooter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0; 
+    background-color: #ededed;
+    color: #000;
+}
+#carouselExampleIndicators{
+    display:block;
+ }
+
+.MultiCarousel{
+    display: none;
+}
+#carouselExampleControls{
+    display: block;
+}
+#carouselExampleControls .carousel-inner .carousel-item img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .flex{
+    display:none;
+  }
+  .service button{
+  color: #fff;
+  border: none
+  };
+}
