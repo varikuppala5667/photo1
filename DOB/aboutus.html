@@ -13,79 +13,87 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      rel="stylesheet">
+     <!--ICONS-->
+     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+       rel="stylesheet">
+ 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+s 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 </head>
 <body>
-    <div class="container-fluid fixed">
-        <div class="container">
+    <div class="container-fluid fixed" style="background-color: white;">
+     
+    
+        <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
 
-            <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="background-color: white;">
-
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="javascript:void(0)">
-                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="mynavbar" >
-                        <ul class="navbar-nav ms-auto " >
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
-                                <ul class="dropdown-menu">
-                                  
-                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                    <li class="back-button"><a href="portfolio.html">More</a></li>
-                                </ul>
-                            </li>
-                           
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
-
-                                <ul class="dropdown-menu">
-                                   
-                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                    <li class="back-button"><a href="portfolio.html">More</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contactus.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="stories.html">Stories</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div class="container-fluid" style="width:80%;height:60px">
             
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar" >
+                    <ul class="navbar-nav ms-auto " >
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
+                            <ul class="dropdown-menu">
+                              
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="portfolio.html">More</a></li>
+                            </ul>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
 
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="portfolio.html">More</a></li>
+                            </ul>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
+                        </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">CONTACT&nbsp;US</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Stories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
         </div>
     </div>
-
     <div class="container-fluid full" style="margin-top: 40px;">
         <div class="row">
             <div class="col-md-6  left" >
-<img src="images/abot.jpg"class="responsive-image" style="width:650px;position: sticky;top:10px;">
+                <img src="images/AB1.jpg" class="responsive-image" style="width:650px;position: sticky;top:10px;height:1000px">
 
 
 
@@ -103,24 +111,19 @@
               </div>
               <div class="row">
 
-              <div class="col-md-3 leftu" style="float: left;width: 320px; padding-right: 20px;">
-<p>
-    
-
-    <p>I do not believe in modern cliché of a superwoman, nor do I have any colored cape or a cat mask.<br><br></p>
-
-
-   
-
-              </div>
-
-            <div class="col-md-3 rightu"  style="float: right;width: 290px;">
-                <img src="images/1L9A2846.jpg" style="width:280px;height:400px;margin-right: 10px;"><br>
-
-               
-            </div>
+            <div class="col-md-6" style="padding-top: 30px;    color: #7e7e7e;    font-family: 'Source Sans Pro';">
+               <p></p> I am Krishna Chaitanya, photographer, settled in Hyderabad – Pune. You would probably expect me to say 
+                I am wonderful, creative and passionate photographer with mountains of experience and piling awards in 
+                the drawers. Well, most of all, I am just another hard working, creative mommy, whose hobby turned into 
+                exciting journey of fascinating career. Another You-could be Me in the past and Me-could be You in near 
+                future.</p>
+                <p>I do not believe in modern cliché of a superwoman, nor do I have any colored cape or a cat mask.</p>
             </div>
 
+                <div class="col-md-6">
+             <img src="images/Ab3.jpg">
+            </div>
+        </div>
             <div class="row graph"  style="width:650px;padding-left: 43px;">
                 <p>I do not wear much of the diamonds, run in Victoria’s Secrets or smell like Chanel. I know, nothing like typical photo geek from the movies! My biggest brand, perfume and salon is<strong>  Canon,</strong>  most precious jewels – 2 adorable <strong>kids</strong> and the only accessories –<strong>  lenses</strong> .</p>
 
@@ -137,25 +140,39 @@
   </a>
   
 
-            <div class="row span"style="margin-top:90px">
-                <div class="col-md-3 para" style=" width:350px;padding-left: 53px;">
+            <div class="row span"style="margin-top:60px">
+                <div class="col-md-6 para" style=" padding-left: 53px">
 <p><strong>NCPI AMBASADOR</strong>
-    <p>Awonderful combination of professional and sincere photo art. Her inborn skills to click candids along with creative set ups, detail focus and motherly attention.</p>
+   <p>We'd love to hear from you and discuss how we can help capture your special moments. Please [CONTACT US](#) to schedule a consultation or inquire about our services.
+</p>
     
     <p>More about <a href="https://example.com">Newborn and Child Photographers Association of India</a></p>
 
                 </div>
 
-                <div class="col-md-3 logo">
- <img src="images/1L9A9882.JPG" style="width: 280px;height: 400px;">
+                <div class="col-md-6 logo" >
+                    <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 500px;height:200px; margin-left: -10px;">
                 </div>
             </div>
 
             <div class="row images">
             <h4>-Recent Work-</h4>
-            <div class="col-md-2 first" style="width: 180px;float: left;">
+            <div id="previewModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+                  <div class="carousel-container">
+                    <div class="carousel-slide">
+                      <img src="" id="previewImage" class="preview-image">
+                    </div>
+                   
+                  </div>
+                  <button class="carousel-btn carousel-prev-btn"><i class="material-icons">keyboard_arrow_left</i></button>
+                  <button class="carousel-btn carousel-next-btn"><i class="material-icons">keyboard_arrow_right</i></button>
+                </div>
+              </div>
+              <div class="col-md-2 first image-container" style="width: 180px; float: left;">
                 <div class="carousel-image">
-                    <img src="images/fam.jpg"  class="image" style="width: 180px;height: 130px;">
+                    <img src="images/1L9A2524.jpg"  class="image" style="width: 180px;height: 130px;">
                     <div class="overlay">
                         <i class="fas fa-camera-retro"></i>
                     </div>
@@ -185,7 +202,7 @@
                     </div>
                 </div><br><br>
                 <div class="carousel-image">
-                    <img src="images/1L9A0032 (3).jpg"  class="image" style="width: 180px;height: 130px;">
+                    <img src="images/1L9A9741.jpg"  class="image" style="width: 180px;height: 130px;">
                     <div class="overlay">
                         <i class="fas fa-camera-retro"></i>
                     </div>
@@ -218,7 +235,7 @@
                     </div>
                 </div><br><br>
                 <div class="carousel-image">
-                    <img src="images/1L9A0210.jpg"  class="image" style="width: 180px;height: 130px;">
+                    <img src="images/1L9A1618.jpg"  class="image" style="width: 180px;height: 130px;">
                     <div class="overlay">
                         <i class="fas fa-camera-retro"></i>
                     </div>
@@ -269,7 +286,7 @@
                     </div>
                 </div><br><br>
                 <div class="carousel-image">
-                    <img src="images/1L9A0210.jpg"  class="image" style="width: 180px;height: 130px;">
+                    <img src="images/1L9A0965.jpg"  class="image" style="width: 180px;height: 130px;">
                     <div class="overlay">
                         <i class="fas fa-camera-retro"></i>
                     </div>
@@ -283,10 +300,11 @@
         </div>
 
         <div class="row style" style="margin-top: 50px;">
-            <h4>-Contact us-</h4>
-            <div class="col-md-6 loc">
-                <li><a href="#"><p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vignanpuri Colony,MythriNagar Kukatpally Hyderabad, Telangana - 500072</p></a></li>
-                <li><a href="#"><p><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 9573796339</p></a></li>
+            <h4>-CONTACT US-</h4>
+            <div class="col-md-6 loc" style="justify-content: center;align-items: center;">
+                <li><a href="#"><p><i class="fa fa-map-marker"></i>&nbsp;Vignanpuri Colony,MythriNagar Kukatpally 
+                    Hyderabad, Telangana - 500072</p></a></li>
+                <li><a href="#"><p><i class="fa fa-phone"></i>&nbsp;+91 9573796339</p></a></li>
                
               
         </div>
@@ -306,3 +324,108 @@
             Ready to shoot? Still curious? We’re more than happy to help you!</p></div>
     </div>
     
+
+
+
+
+
+
+    
+
+
+<script>
+    $(document).ready(function() {
+      // Implement left and right button functionality for the slideshow
+      $('.overlay').on('click', function(event) {
+        event.preventDefault(); // Prevent the default behavior (redirecting back to the image grid)
+        var imageSrc = $(this).siblings('.image').attr('src');
+        $('#previewImage').attr('src', imageSrc);
+        $('#previewModal').css('display', 'block');
+      });
+    
+      // When the close button or the modal background is clicked, hide the modal
+      $('.close, .modal').on('click', function() {
+        $('#previewModal').css('display', 'none');
+      });
+    
+      // Implement left and right button functionality for the slideshow
+      $('.carousel-prev-btn').on('click', function(event) {
+        event.stopPropagation(); // Prevent the click event from propagating to the overlay
+        var currentImage = $('#previewImage').attr('src');
+        // Get the previous image source
+        var prevImage = getPrevImage(currentImage);
+        $('#previewImage').attr('src', prevImage);
+      });
+    
+      $('.carousel-next-btn').on('click', function(event) {
+        event.stopPropagation(); // Prevent the click event from propagating to the overlay
+        var currentImage = $('#previewImage').attr('src');
+        // Get the next image source
+        var nextImage = getNextImage(currentImage);
+        $('#previewImage').attr('src', nextImage);
+      });
+    
+      // Helper function to get the previous image source
+      function getPrevImage(currentImage) {
+        // Get all image sources from the image grid
+        var imageSources = $('.image').map(function() {
+          return $(this).attr('src');
+        }).get();
+    
+        // Find the index of the current image
+        var currentIndex = imageSources.indexOf(currentImage);
+    
+        // Calculate the index of the previous image
+        var prevIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+    
+        // Return the source of the previous image
+        return imageSources[prevIndex];
+      }
+    
+      // Helper function to get the next image source
+      function getNextImage(currentImage) {
+        // Get all image sources from the image grid
+        var imageSources = $('.image').map(function() {
+          return $(this).attr('src');
+        }).get();
+    
+        // Find the index of the current image
+        var currentIndex = imageSources.indexOf(currentImage);
+    
+        // Calculate the index of the next image
+        var nextIndex = (currentIndex + 1) % imageSources.length;
+        return imageSources[nextIndex];
+      }
+    });
+    </script>
+
+
+
+
+    <script>
+// JavaScript to trigger the fade-in animations
+const imageContainers = document.querySelectorAll('.carousel-image-container');
+
+const options = {
+    threshold: 0.5, // 50% of the element must be in the viewport
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target); // Unobserve after applying the animation
+        }
+    });
+}, options);
+
+imageContainers.forEach((container) => {
+    observer.observe(container);
+});
+
+
+    </script>
+
+</div>
+</body>
+</html>

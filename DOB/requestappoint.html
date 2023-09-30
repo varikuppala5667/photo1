@@ -16,65 +16,69 @@
 
 </head>
 <body>
-    <div class="container-fluid fixed">
-        <div class="container">
+  <div class="container-fluid fixed" style="background-color: white;">
+    
+    <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
 
-          <nav class="navbar navbar-expand-sm navbar-white  navbar-transition fixed-top" style="background-color: white;" style="top:10;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar" >
-                    <ul class="navbar-nav ms-auto " >
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            
-                            <a class="nav-link" href="service.html">Service<span class="caret-down-icon"></span></a>
-                            <ul class="dropdown-menu" id="servicesDropdown">
-                              
-                                <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                <li class="back-button"><a href="service.html">More</a></li>
-                            </ul>
-                        </li>
-                       
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
+      <div class="container-fluid" style="width:80%;height:60px">
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar" >
+              <ul class="navbar-nav ms-auto " >
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
+                      <ul class="dropdown-menu">
+                        
+                          <li><a href="newborn.html">Newborn Photo Session</a></li>
+                          <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                          <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                          <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                          <li class="back-button"><a href="portfolio.html">More</a></li>
+                      </ul>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                 
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
 
-                            <ul class="dropdown-menu">
-                               
-                                <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                <li class="back-button"><a href="portfolio.html">More</a></li>
-                            </ul>
-                        </li>
+                      <ul class="dropdown-menu">
+                          
+                          <li><a href="newborn.html">Newborn Photo Session</a></li>
+                          <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                          <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                          <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                          <li class="back-button"><a href="portfolio.html">More</a></li>
+                      </ul>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactus.html">Contact us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stories.html">Stories</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pricing.html">Pricing</a>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        </div>
+                  <a class="navbar-brand" href="javascript:void(0)">
+                      <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
+                  </a>
+                  <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item">
+                      <a class="nav-link" href="contactus.html">CONTACT&nbsp;US</a>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item">
+                      <a class="nav-link" href="stories.html">Stories</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+        
     </div>
+    </div>
+</div>
     
 <div class="container-fluid portfolio">
     <div class="container">
@@ -89,7 +93,7 @@
 
 <div class="container">
     <div class="heading">
-        <img src="images/1L9A0210.jpg" alt="">
+        <img src="images/999.jpg" alt="">
     </div>
 
 </div>
@@ -221,7 +225,7 @@
       jsonData[key] = value;
     });
 
-    fetch('http://18.214.88.216:80/api/appointment/appointment', {
+    fetch('http://localhost:3000/api/appointment/appointment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -275,7 +279,7 @@
 
 
 
-<div class="container-fluid large" style="background-color: #ededed; margin-top: 50px; margin-top: 160px; height: 90px;">
+<div class="container-fluid large" style="background-color: #ededed; margin-top: 50px; margin-top: 160px; height: 60px;">
     <div class="container ">
         <div class="row">
             <div class="col-lg-8">
@@ -315,7 +319,7 @@
 
             <div class="col-md-4">
                 <h3 class="footerh3">WHAT PEOPLE SAY</h3>
-                <img src="images/Logo web.png" alt="" width="350px" height="100px">
+                <img src="images/Logo web.png" alt="" width="200px" height="100px">
                 <p>DayOfBorn photography</p>
             </div>
         </div>

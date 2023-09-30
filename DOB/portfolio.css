@@ -12,22 +12,32 @@
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
 }
-.img-fluid{
-    width: 19%;
-    margin-left: 100px;
-}
+
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
     display: block;
     margin-top: 2px;
     border: none;
 }
-.navbar-nav .nav-link:hover {
-    border-bottom: 2px solid #0d0e0d; 
+.img-fluid{
+    width: 19%;
+    margin-left: 40px;
+    height:40px;
+    }
+    
+    nav .nav-link:hover {
+    border: 1px solid #0d0e0d; 
+    cursor: pointer;
  
 }
+
+.nav-link{
+    margin-top:30px;
+   
+  }
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -69,7 +79,7 @@
 .portfolio h3{
     padding-top: 45px;
     padding-left: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .anchor{
     display: flex;
@@ -172,7 +182,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .footerservice a{
     text-decoration: none;
@@ -240,6 +250,37 @@
     pointer-events:all;
 }
 
+   /* Styles for the image preview container */
+   .image-preview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    z-index: 9999;
+}
+
+/* Styles for the previewed image */
+.previewed-image {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    padding: 20px;
+}
+
+/* Styles for the close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 @media (max-width: 568px) {
     .slider,
@@ -314,6 +355,9 @@
         /* Adjust the background color of the "More" link to match the highlight style */
         .dropdown-menu .back-button a:hover {
             background-color: #f4f6f7;
+        }
+        .site{
+            display:none;
         }
     
     }

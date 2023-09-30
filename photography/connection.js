@@ -33,7 +33,7 @@ function createTables() {
   )
 `;
 
-  const createContactUsTableQuery = `
+  const createCONTACTUSTableQuery = `
 CREATE TABLE IF NOT EXISTS contact_us (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -57,7 +57,7 @@ const createPricingTableQuery = `
 CREATE TABLE IF NOT EXISTS pricing (
   id INT AUTO_INCREMENT PRIMARY KEY,
   image LONGBLOB,
-  title VARCHAR(255) NOT NULL,
+  title TEXT NOT NULL,
   price INT,
   subtitle VARCHAR(255) NOT NULL,
   terms_and_conditions TEXT NOT NULL
@@ -82,7 +82,12 @@ CREATE TABLE IF NOT EXISTS photos (
   FOREIGN KEY (sid) REFERENCES stories(sid) ON DELETE CASCADE
 )
 `;
-
+const createImagesTableQuery = `
+CREATE TABLE IF NOT EXISTS images (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  image_data LONGBLOB NOT NULL
+);
+`;
 
   connection.query(createAppointmentTableQuery, (err, results) => {
     if (err) {
@@ -92,7 +97,7 @@ CREATE TABLE IF NOT EXISTS photos (
     }
   });
 
-  connection.query(createContactUsTableQuery, (err, results) => {
+  connection.query(createCONTACTUSTableQuery, (err, results) => {
     if (err) {
       console.error("Error creating contact_us table:", err);
     } else {
@@ -125,6 +130,15 @@ CREATE TABLE IF NOT EXISTS photos (
   });
 
   connection.query(createPhotosTableQuery, (err, results) => {
+    if (err) {
+      console.error("Error creating photos table:", err);
+    } else {
+      console.log("Photos table created successfully");
+    }
+  });
+
+
+  connection.query(createImagesTableQuery, (err, results) => {
     if (err) {
       console.error("Error creating photos table:", err);
     } else {

@@ -39,16 +39,40 @@
 
     </script>
      <link rel="icon" href="favicon.ico" type="images/1.png">
+     <style>
+     .slideshow-container {
+    max-width: 200%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Add this CSS for individual slides */
+ 
+
+  /* Add this CSS for navigation dots */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add this CSS to highlight the active dot */
+  .active {
+    background-color: #717171;
+  }
+     </style>
 </head>
 <body>
-    <div class="container-fluid fixed">
-        <div class="container">
+    <div class="container-fluid fixed" style="background-color: white;">
+     
+        <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
 
-            <nav class="navbar navbar-expand-sm navbar-white  navbar-transition fixed-top" style="background-color: white;" style="top:10;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="javascript:void(0)">
-                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
-                    </a>
+                <div class="container-fluid" style="width:80%;height:60px">
+                
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -56,17 +80,18 @@
                         <ul class="navbar-nav ms-auto " >
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
                                 <ul class="dropdown-menu">
                                   
                                     <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
                                     <li><a href="babyphoto.html">Baby Photo Session</a></li>
                                     <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
                                     <li class="back-button"><a href="portfolio.html">More</a></li>
                                 </ul>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
@@ -74,21 +99,26 @@
                                 <ul class="dropdown-menu">
                                     
                                     <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
                                     <li><a href="babyphoto.html">Baby Photo Session</a></li>
                                     <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
                                     <li class="back-button"><a href="portfolio.html">More</a></li>
                                 </ul>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <li class="nav-item">
                                 <a class="nav-link" href="pricing.html">Pricing</a>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <a class="navbar-brand" href="javascript:void(0)">
+                                <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
+                            </a>
                             <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About us</a>
-                            </li>
+                                <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
-                                <a class="nav-link" href="contactus.html">Contact us</a>
-                            </li>
+                                <a class="nav-link" href="contact us.html">CONTACT US</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
                                 <a class="nav-link" href="stories.html">Stories</a>
                             </li>
@@ -97,28 +127,158 @@
                 </div>
             </nav>
             
-
         </div>
-    </div><br><br><br><br><br>
+        </div>
+    </div><br><br><br>
 
     <!-- Slider  -->
-    <div class="slider" id="slider1">
-        <div style="background-image:url(images/1L9A0467.jpg)"></div>
-        <div style="background-image:url(images/1L9A0011.jpg)"></div>
-        <div style="background-image:url(images/1L9A0138.jpg)"></div>
-        <div style="background-image:url(images/1L9A9412.jpg)"></div>
-      
-        <!-- The Arrows -->
-        <i class="left arrows" style="z-index:2; position:absolute; color:white;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
-        <i class="right arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+   
 
+    <table>
+        <thead>
+           
+        </thead>
+      <tbody id="imageContainer">
+        <!-- Rows will be populated here -->
+    </tbody>
+
+    <!-- Your existing HTML code for the static carousel -->
+
+<!-- Dynamic image carousel -->
+<div class="col-md-12">
+    <div id="dynamicCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators" id="dynamicIndicators">
+        <!-- Dynamic indicators will be populated here -->
       </div>
+      <div class="carousel-inner" id="dynamicCarouselInner">
+        <!-- Dynamic carousel items will be populated here -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+<script>
+  // Function to fetch images from the server and populate the dynamic carousel
+  function fetchAndPopulateImages() {
+    // Make a GET request to your backend's /images endpoint
+    fetch('http://localhost:3000/api/images/images')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch images');
+        }
+        return response.json();
+      })
+      .then(images => {
+        // Handle the received images data here
+        console.log('Fetched images:', images);
+  
+        // Get references to the dynamic carousel elements
+        const dynamicIndicators = document.getElementById('dynamicIndicators');
+        const dynamicCarouselInner = document.getElementById('dynamicCarouselInner');
+  
+        // Initialize an index for the indicators
+        let indicatorIndex = 0;
+  
+        // Loop through the images array and populate the dynamic carousel
+        images.forEach(image => {
+          // Assuming each image has an "id" and "image_data" property
+          const imageId = image.id;
+          const imageData = image.image_data;
+  
+          // Create a new carousel indicator
+          const indicator = document.createElement('button');
+          indicator.setAttribute('type', 'button');
+          indicator.setAttribute('data-bs-target', '#dynamicCarousel');
+          indicator.setAttribute('data-bs-slide-to', indicatorIndex);
+          if (indicatorIndex === 0) {
+            indicator.classList.add('active');
+          }
+          dynamicIndicators.appendChild(indicator);
+  
+          // Create a new carousel item
+          const carouselItem = document.createElement('div');
+          carouselItem.classList.add('carousel-item');
+          if (indicatorIndex === 0) {
+            carouselItem.classList.add('active');
+          }
+  
+          // Convert the binary image data to a Blob
+          const uint8Array = new Uint8Array(imageData.data);
+          const blob = new Blob([uint8Array], { type: 'image/jpeg' }); // Adjust the type as needed
+  
+          // Create an img element for the image
+          const imgElement = document.createElement('img');
+          imgElement.src = URL.createObjectURL(blob);
+          imgElement.alt = 'Image';
+          imgElement.style.width = '1349'; // Set the width as needed
+        imgElement.style.height = '422px';
+          // Append the img element to the carousel item
+          carouselItem.appendChild(imgElement);
+  
+          // Append the carousel item to the dynamic carousel inner container
+          dynamicCarouselInner.appendChild(carouselItem);
+  
+          // Increment the indicator index
+          indicatorIndex++;
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error.message);
+      });
+  }
+  
+  // Call the fetchAndPopulateImages function to initiate the image fetching and carousel population
+  fetchAndPopulateImages();
+    </script>
+  </table>
+  
+  <script>
+    // Function to fetch images from the server
+    function fetchImages() {
+        // Make a GET request to your backend's /images endpoint
+        fetch('http://localhost:3000/api/images/images')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch images');
+                }
+                return response.json();
+            })
+            .then(images => {
+                // Handle the received images data here
+                console.log('Fetched images:', images);
+  
+                // You can loop through the images array and do something with each image
+                images.forEach(image => {
+                    // Assuming each image has an "id" and "image_data" property
+                    const imageId = image.id;
+                    const imageData = image.image_data;
+  
+                    // Call the displayImage function to display each image in a table row
+                    displayImage(imageId, imageData);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error.message);
+            });
+    }
+  
+  
+  </script>
+  
 
         <!-- Text container inside the slider -->
         <div class="text-container">
-            <p class="animated-text">Today's Moments are Tomorrow's Memory</p>
-            <p><a href="index.html"><button>Freeze the moment</button></a></p>
-          </div>
+            <p class="animated-text">Today's Moments are Tomorrow's</p>
+            <p class="tt">Memories</p>
+            <p><a href="index.html"><button class="name">Freeze the moment</button></a></p>
+</div>
 
 
       
@@ -141,7 +301,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="carousel-image">
-                            <img src="images/1L9A1177.jpg" alt="Image 2" class="image" >
+                            <img src="images/1L9A1427.jpg" alt="Image 2" class="image" >
                             <div class="overlay">
                              
                                 <div class="iconedit">
@@ -328,7 +488,7 @@
   </div>
 
 <div class="container-fluid service">
-    <h1 class="edita">DAY OF BORN PHOTOGRAPHY SERVICES</h1>
+    <h2 class="edita">DAY OF BORN PHOTOGRAPHY SERVICES</h2>
     <div class="container">
        
         <a href="service.html""  class="btn btn-shutter btn-shutter-black">VIEW ALL SERVICE</a>
@@ -497,7 +657,7 @@
  
         <div class="col-md-4">
             <div class="card">
-                <img src="images/1L9A1177.jpg" alt="Avatar" style="width:100%" height="100%">
+                <img src="images/1L9A2103.jpg" alt="Avatar" style="width:100%" height="100%">
               </div>
         </div>
 
@@ -516,13 +676,13 @@
             </div>
         </div>
         
-        
-
         <div class="col-md-4">
             <div class="card">
-                <img src="images/1L9A0023.jpg" alt="Avatar" style="width:100%" height="100%">
+                <img src="images/1L9A3796.jpg" alt="Avatar" style="width:100%" height="100%">
               </div>
         </div>
+
+     
 
         <div class="col-md-4">
             <div class="card">
@@ -532,7 +692,7 @@
 
         <div class="col-md-4">
             <div class="card">
-                <img src="images/1L9A3796.jpg" alt="Avatar" style="width:100%" height="100%">
+                <img src="images/1L9A7421.jpg" alt="Avatar" style="width:100%" height="100%">
               </div>
         </div>
 
@@ -583,7 +743,7 @@
 
 <!--FAQ-->
 <div class="container">
-    <h1>FAQ</h1>
+    <h1 style="font-family:'Montserrat';">FAQ</h1>
     <div class="row">
     <div class="col-lg-8 accordionhead">
         <div id="accordion" class="accordion-container">
@@ -617,9 +777,9 @@
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1"1>
-                    <img src="images/123.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/22.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
-                         <a href="contactus.html"><i class="fa-sharp fa-solid fa-share-nodes"></i></a> 
+                         <a href="contact us.html"><i class="fa-sharp fa-solid fa-share-nodes"></i></a> 
                           
                     </div> -->
                 </div>
@@ -636,7 +796,7 @@
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1">
-                    <img src="images/1234.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/9.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
                         <i class="fa-sharp fa-solid fa-share-nodes"></i> 
                       <p class="texts">Image Description</p> 
@@ -655,7 +815,7 @@
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1">
-                    <img src="images/22222.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/33.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
                         <i class="fa-sharp fa-solid fa-share-nodes"></i> 
                     <p class="texts">Image Description</p>  
@@ -679,9 +839,9 @@
 
 
 <!--Single Line-->
-<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
     <div class="container">
-        <div class="row">
+        <div class="row" style="height:40px">
             <div class="col-lg-8">
                 <span>Ready to shoot? Still curious? We’re more than happy to help you!</span>
             </div>
@@ -721,7 +881,7 @@
 
             <div class="col-md-4">
                 <h3 class="footerh3">WHAT PEOPLE SAY</h3>
-                <img src="images/Logo web.png" alt="" width="350px" height="100px">
+                <img src="images/Logo web.png" alt="" width="200px" height="100px">
                 <p>DayOfBorn photography</p>
             </div>
         </div>
@@ -1032,7 +1192,14 @@ shareIcon.addEventListener('click', () => {
 
 
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Add the 'fade-in' class to the button after a delay (e.g., 1 second)
+        setTimeout(function () {
+            document.querySelector(".name").classList.add("fade-in");
+        }, 1000); // 1000 milliseconds (1 second)
+    });
+</script>
 
 
 

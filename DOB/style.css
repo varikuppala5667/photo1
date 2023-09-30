@@ -62,7 +62,7 @@
 .texting{
     text-align: center;
     /* margin-top: 200px; */
-    margin-left: 100px;
+    margin-left: 40px;
   }
 
   .texts{
@@ -132,10 +132,45 @@
     font-size: 24px;
     text-align: left;
     z-index: 2;
-    padding-left: 70px;;
-    animation: fadeInOut 3s infinite;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 70px;
+    padding-left:330px;
+ 
   }
+.animated-text{
+    animation: fadeInOut 3s infinite;
+    font-family: "Great Vibes";
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    color: rgb(209, 209, 209);
+    float:right;
+    padding-left:330px;
+}
+.name{
+    margin-left:600px;
+
+    height: auto !important;
+}
+.name {
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1s ease-in-out; /* Transition effect with 1 second duration */
+}
+
+/* Define a class to trigger the animation */
+.fade-in {
+    opacity: 1;
+   
+}
+.tt{
+    animation: fadeInOut 3s infinite;
+    font-family: "Great Vibes";
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    color: rgb(209, 209, 209);
+    padding-left:700px;
+
+}
 
   @keyframes fadeInOut {
     0%, 100% { opacity: 0; }
@@ -156,6 +191,13 @@
     color: white;
    
 }
+
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
+}
 .navbar-nav{
     display: flex;
     flex-direction: row;
@@ -165,11 +207,13 @@
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
 }
 .img-fluid{
     width: 19%;
-    margin-left: 100px;
+    height:40px;
+   
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
@@ -179,7 +223,7 @@
    
 }
 .navbar-nav .nav-link:hover {
-    border-bottom: 2px solid #0d0e0d; 
+    border:1px solid #0d0e0d; 
  
 }
 .dropdown-menu {
@@ -339,7 +383,7 @@
     display: flex;
 }
 .iconedit i{
-    margin-top: 190px;
+    margin-top: 160px;
     border-radius: 120px;
     padding: 25px;
 }
@@ -490,6 +534,11 @@
     background-color: #ddd;
     height: 900px;
 }
+
+.service h2{
+    font-family: 'Montserrat';
+    font-weight: normal;
+}
 /* .service button{
     padding: 10px;
     border: 1px solid #000;
@@ -502,6 +551,8 @@
 .edita{
     text-align: center;
     padding: 50px;
+    font-weight: normal;
+    font-family: 'Montserrat';
 }
 .line{
     width: 40px;
@@ -691,7 +742,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .footerservice a{
     text-decoration: none;
@@ -794,7 +845,7 @@
 
   .navbar .navbar-fixed{
     transition:1s;
-    height: 100vh;
+    height: 60vh;
   }
 
 #carouselExampleControls{
@@ -803,6 +854,13 @@
 
  #carouselExampleIndicators{
     display:none;
+ }
+.heading{
+    font-family: 'Montserrat';
+}
+ .head h2{
+    text-align: center;
+    font-family: 'Montserrat';
  }
 @media (max-width: 568px) {
 .slider,
@@ -826,6 +884,7 @@
 
     .navbar-collapse {
         position: relative;
+        height:60px;
     }
 
     .navbar-nav.ms-auto {
@@ -911,10 +970,7 @@
     height: 220px;
     object-fit: cover;
   }
-
-  .flex{
-    display:none;
-  }
+c
   .service button{
   color: #fff;
   border: none

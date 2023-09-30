@@ -29,7 +29,7 @@ padding: 0px;
 .sidebar {
   width: 250px; /* Set the width */
   height: 100vh; /* Set the height */
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
  padding:10px;
@@ -139,7 +139,7 @@ max-width: 90%; /* Ensure it doesn't exceed the screen width */
 
 
 .navbar.sticky-top {
-position: fixed;
+/* position: fixed; */
 top: 0;
 width: 100%;
 z-index: 1000;
@@ -442,6 +442,8 @@ font-size: 11px;
   background-color: #2980b9;
 }
 
+
+
 #AddAlbum {
   display: none;
   position: fixed;
@@ -472,7 +474,7 @@ button[type="submit"]:hover {
 }
 
 /* Additional mobile styles for other sections as needed */
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     body {
         padding-top: 70px; /* Adjust as needed */
     }
@@ -531,4 +533,19 @@ margin-top: 20px; /* Adjust the margin for smaller screens */
 }
 
 
+/* Style for the delete button */
+.delete-button {
+  background-color: #f44336; /* Red background color */
+  color: white; /* White text color */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Add some padding around the button text */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+}
+
+/* Style for the delete button on hover */
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red background color on hover */
+}
 

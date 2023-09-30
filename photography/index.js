@@ -9,6 +9,7 @@ const contactusRoutes = require('./contactus');
 const pricingRoutes = require('./pricing');
 const storiesRoutes = require('./stories');
 const photostories = require('./photosss');
+const imagesRoutes= require('./images')
 const mysql = require("mysql2");
 
 
@@ -43,7 +44,7 @@ function startServer() {
   app.use('/api/pricing', pricingRoutes);
   app.use('/api/stories', storiesRoutes);
   app.use('/api/photos', photostories)
-
+app.use('/api/images',imagesRoutes)
   const port = 3000;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

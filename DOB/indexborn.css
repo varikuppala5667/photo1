@@ -5,29 +5,30 @@
 }
 .navbar{
     color: white;
-    width: 100%;
-}
-.navbar-brand{
    
-    padding-right: 30px;
+}
+
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
 }
 .navbar-nav{
-    margin-right: 10px;
-    width:150%
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    transition: padding 0.6s;
 }
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   
-}
-.navbar-nav .nav-link:hover {
-    border-bottom: 2px solid #0d0e0d; 
- 
+    font-family: 'Montserrat';
+    text-transform: uppercase;
 }
 .img-fluid{
     width: 19%;
-    margin-left: 100px;
+    height:40px;
    
 }
 /* Add this CSS to your existing styles or style tag */
@@ -35,6 +36,11 @@
     display: block;
     margin-top: 2px;
     border: none;
+   
+}
+.navbar-nav .nav-link:hover {
+    border:1px solid #0d0e0d; 
+ 
 }
 .dropdown-menu {
     display: none;
@@ -69,7 +75,6 @@
     background-color: #fff;
     border-left: 3px solid #000;
 }
-
 .heading a{
     text-decoration: none;
     margin-top: 500px;
@@ -96,7 +101,10 @@
     margin-top: 20px;
     margin-top: 7px;
 }
-
+.heading h2{
+    font-family: 'Montserrat';
+    margin-top: 20px;
+}
 .second .image-container img{
    width: 480px;
 }
@@ -130,8 +138,8 @@
   }
   
   .grid-item {
-    width:350px;
-    max-width: 350px; 
+    width:200px;
+    max-width: 200px; 
     padding: 5px;
     font-size: 30px;
   
@@ -185,7 +193,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .footerservice a{
     text-decoration: none;
@@ -253,3 +261,40 @@
 .fa-twitter{
     color: #0090D2;
 }
+
+
+
+
+
+@media (max-width: 568px) {
+
+        .navbar-toggler {
+            display: block; /* Show the toggle button on smaller screens */
+        }
+    
+        .navbar-collapse {
+            display: none; /* Hide the menu by default on smaller screens */
+        }
+    
+        .navbar-collapse.show {
+            display: block; /* Show the menu when toggled */
+        }
+    
+        .nav-item {
+            text-align: center; /* Center-align menu items */
+        }
+        .heading{
+            width:100%;
+        }
+        .site{
+            display:none;
+        }
+
+    }
+
+    
+    
+    
+    
+    
+    

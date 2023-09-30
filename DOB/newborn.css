@@ -10,7 +10,78 @@
     height:70px;
     margin-top: 50px;
 }
+.navbar{
+    color: white;
+   
+}
 
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    transition: padding 0.6s;
+}
+.nav-item .nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+.img-fluid{
+    width: 19%;
+    height:40px;
+   
+}
+/* Add this CSS to your existing styles or style tag */
+.nav-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+    border: none;
+   
+}
+.navbar-nav .nav-link:hover {
+    border:1px solid #0d0e0d; 
+ 
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid #000;
+}
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    background-color: #f4f6f7;
+    border-top: 1px solid #dfe5e8;
+    line-height: 43px;
+}
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-menu li:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-left: 3px solid #000;
+}
 .btn {
     width:250px;
     height:40px;
@@ -36,7 +107,7 @@ a {
 .portfolio h3{
     padding-top: 45px;
     padding-left: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .anchor{
     display: flex;
@@ -186,7 +257,7 @@ a {
     position: absolute;
     left: 0;
     margin: 20px;
-    max-width: 350px;
+    max-width: 200px;
     padding: 16px;
     background-color: white;
     float: right;
@@ -272,7 +343,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 .footerservice h5{
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .footerservice a{
     text-decoration: none;
@@ -378,11 +449,12 @@ input[type=text]:focus, input[type=password]:focus {
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .img-fluid{
     width: 19%;
-    margin-left: 100px;
+    margin-left: 40px;
+    margin-top:10px;
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {

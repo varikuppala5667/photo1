@@ -74,18 +74,25 @@
             <button class="nav-link btn btn-link active" onclick="loadContent('enquiry')">Appointment&nbsp;List</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn btn-link active" onclick="loadContent('contact')">Contact Us</button>
+            <button class="nav-link btn btn-link active" onclick="loadContent('contact')">CONTACT US</button>
           </li>
           <li class="nav-item">
             <button class="nav-link btn btn-link active" onclick="loadContent('pricing')">Add Pricing</button>
           </li>
+
+          <li class="nav-item">
+            <button class="nav-link btn btn-link active" onclick="loadContent('images')">Add images</button>
+          </li>
+
           <li class="nav-item">
             <button class="nav-link btn btn-link active" onclick="loadContent('pricinglist')">Pricing List</button>
           </li>
-      
+
+         
+          
         </ul>
       </nav>
-      
+    
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" id="main-content">
         <section class="content-section active" id="stories">
@@ -110,46 +117,67 @@
             <input type="submit" value="Upload Photo">
         </form>
         <div class="popup-modal" id="popupModal">
-          <div class="popup-content">
-            <h2>Thank You!</h2>
-            <p>Your form has been submitted successfully.</p>
-            <button type="button" class="close-btn" id="closeBtn">Close</button>
-          </div>
+         
         </div>
       </section>
    
 
-<script>
-  const storyForm = document.getElementById('storyForm');
-
-  storyForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(storyForm);
-
-    fetch('http://18.214.88.216:80/api/stories/stories', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
-        storyForm.reset(); 
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('POST request failed!');
-        }
-      })
-    
-      .then((data) => {
-        // Process the response data here if needed
-        console.log('POST request successful!', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error.message);
-        // Handle the error scenario
-      });
-  });
-</script>
+      <script>
+        const MAX_STORY_COUNT = 5; // Maximum allowed story count
+      
+        const storyForm = document.getElementById('storyForm');
+      
+        storyForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+      
+          // Check the number of existing stories (rows) before submitting
+          fetch('http://localhost:3000/api/stories/stories')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Failed to fetch stories data');
+              }
+              return response.json();
+            })
+            .then(data => {
+              if (data.length >= MAX_STORY_COUNT) {
+                // Display a SweetAlert warning message when the user tries to store more than 5 rows
+                Swal.fire({
+                  title: 'Warning',
+                  text: 'You can only store up to 5 stories. Please delete some stories to make space for new ones.',
+                  icon: 'warning',
+                });
+              } else {
+                // If the story count is less than 5, proceed with the submission
+                const formData = new FormData(storyForm);
+      
+                fetch('http://localhost:3000/api/stories/stories', {
+                  method: 'POST',
+                  body: formData,
+                })
+                  .then((response) => {
+                    storyForm.reset();
+                    if (response.ok) {
+                      return response.json();
+                    } else {
+                      throw new Error('POST request failed!');
+                    }
+                  })
+                  .then((data) => {
+                    // Process the response data here if needed
+                    console.log('POST request successful!', data);
+                  })
+                  .catch((error) => {
+                    console.error('Error:', error.message);
+                    // Handle the error scenario
+                  });
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error.message);
+            });
+        });
+      </script>
+      
 
 
 
@@ -192,7 +220,7 @@
           let startingSerialNumber = 1;
           
           function fetchAndPopulateAppointmentTable(page) {
-            fetch('http://18.214.88.216:80/api/appointment/appointments')
+            fetch('http://localhost:3000/api/appointment/appointments')
               .then(response => response.json())
               .then(data => {
                 appointmentData = data;
@@ -281,7 +309,6 @@
     <button class="pagination-button" onclick="nextPage()">Next</button>
   </div>
   
-  
 </section>
 
 <!-- Your HTML structure -->
@@ -294,7 +321,7 @@
   let startingSerialNumberr = 1; // Initialize the starting serial number
 
   function fetchContacts() {
-    fetch('http://18.214.88.216:80/api/contactus/contacts')
+    fetch('http://localhost:3000/api/contactus/contacts')
       .then(response => response.json())
       .then(responseData => {
         data = responseData;
@@ -367,6 +394,232 @@
 </script> 
 
 
+<section class="content-section active" id="images">
+  <h1>Add images</h1>
+
+  <form id="imageForm"> <!-- Change the form ID to "imageForm" -->
+    <div class="form-group">
+      <label for="photo">Photo:</label>
+      <input type="file" class="form-control" id="image_data" name="image_data" accept="image/*">
+    </div>
+  
+    <input type="submit" value="Submit">
+  </form>
+
+
+  <table>
+    <thead>
+        <tr>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody id="imageContainer">
+        <!-- Rows will be populated here -->
+    </tbody>
+  </table>
+  
+
+  <script>
+ 
+  const MAX_IMAGE_COUNT = 4; // Maximum allowed image count
+
+// Initialize the image counter
+let imageCounter = 0;
+
+const imageForm = document.getElementById('imageForm');
+
+imageForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // Check the number of existing images before submitting
+  fetch('http://localhost:3000/api/images/images')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch images data');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.length >= MAX_IMAGE_COUNT) {
+        // Display a SweetAlert error message when the user tries to upload more than 4 images
+        Swal.fire({
+          title: 'Error',
+          text: 'You can only upload up to 4 images. Please delete some images to make space for new ones.',
+          icon: 'error',
+        });
+      } else {
+        // If the image count is less than 4, proceed with the submission
+        const formData = new FormData(imageForm);
+
+        fetch('http://localhost:3000/api/images/images', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => {
+            imageForm.reset();
+            if (response.ok) {
+              // Increment the image counter
+              imageCounter++;
+              return response.json();
+            } else {
+              throw new Error('POST request failed!');
+            }
+          })
+          .then((data) => {
+            // Process the response data here if needed
+            console.log('POST request successful!', data);
+
+            // Display a SweetAlert for successful upload
+            Swal.fire({
+              title: 'Success',
+              text: 'Image uploaded successfully!',
+              icon: 'success',
+              confirmButtonText: 'OK',
+            });
+
+            // Show the confirmation message
+            document.getElementById('popupModal').style.display = 'block';
+          })
+          .catch((error) => {
+            console.error('Error:', error.message);
+            // Handle the error scenario
+          });
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error.message);
+    });
+});
+
+document.getElementById('closeBtn').addEventListener('click', function () {
+  // Close the confirmation message
+  document.getElementById('popupModal').style.display = 'none';
+});
+</script>
+
+</section>
+
+<script>
+function fetchImages() {
+  // Make a GET request to your backend's /images endpoint
+  fetch('http://localhost:3000/api/images/images')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch images');
+      }
+      return response.json();
+    })
+    .then(images => {
+      // Handle the received images data here
+      console.log('Fetched images:', images);
+
+      // You can loop through the images array and do something with each image
+      images.forEach(image => {
+        // Assuming each image has an "id" and "image_data" property
+        const imageId = image.id;
+        const imageData = image.image_data;
+
+        // Call the displayImage function to display each image in a table row
+        displayImage(imageId, imageData);
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error.message);
+    });
+}
+
+function displayImage(imageId, imageData) {
+// Create a table row
+const tableRow = document.createElement('tr');
+
+// Create a table data cell for the image
+const tableData = document.createElement('td');
+
+// Convert the binary image data to a Blob
+const uint8Array = new Uint8Array(imageData.data);
+const blob = new Blob([uint8Array], { type: 'image/jpeg' }); // Adjust the type as needed
+
+// Create an img element for the image
+const imgElement = document.createElement('img');
+imgElement.src = URL.createObjectURL(blob);
+
+// Set alt text for accessibility
+imgElement.alt = 'Image';
+
+// Append the img element to the table data cell
+tableData.appendChild(imgElement);
+
+// Create a delete button for the row
+const deleteButton = document.createElement('button');
+deleteButton.textContent = 'Delete';
+
+// Add an event listener to handle row deletion when the button is clicked
+deleteButton.addEventListener('click', () => {
+    // Show a SweetAlert confirmation dialog
+    Swal.fire({
+        title: 'Delete Image',
+        text: 'Are you sure you want to delete this image?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // User confirmed the deletion, remove the row from the table
+            tableRow.remove();
+
+            // Send a DELETE request to your backend to delete the image based on imageId
+            fetch(`http://localhost:3000/api/images/images/${imageId}`, {
+method: 'DELETE'
+})
+
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to delete image');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the success response from the delete API if needed
+                console.log('Image deleted:', data);
+            })
+            .catch(error => {
+                console.error('Error deleting image:', error);
+            });
+        }
+    });
+});
+
+// Create a table data cell for the delete button
+const deleteButtonCell = document.createElement('td');
+deleteButtonCell.appendChild(deleteButton);
+
+// Append the table data cell with the delete button to the table row
+tableRow.appendChild(tableData);
+tableRow.appendChild(deleteButtonCell);
+
+// Append the table row to the container for displaying images
+const imageContainer = document.getElementById('imageContainer');
+imageContainer.appendChild(tableRow);
+// Create a delete button for the row
+
+deleteButton.className = 'delete-button'; // Apply the CSS class
+
+// Rest of your delete button creation code...
+
+}
+
+
+// Call the fetchImages function to initiate the image fetching process
+fetchImages();
+
+
+</script>
+
+
+
+
 
         <section class="content-section" id="pricing">
           <h1>Pricing</h1>
@@ -397,70 +650,145 @@
             <input type="submit" value="Submit">
           </form>
            <div class="popup-modal" id="popupModal">
-            <div class="popup-content">
-              <h2>Thank You!</h2>
-              <p>Your form has been submitted successfully.</p>
-              <button type="button" class="close-btn" id="closeBtn">Close</button>
-            </div>
+            
           </div>
         </section>
 
 
-<script>
-  const pricingForm = document.getElementById('pricingForm');
-
-  pricingForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(pricingForm);
-
-    fetch('http://18.214.88.216:80/api/pricing/pricing', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
-        pricingForm.reset();
-        if (response.ok) {
-          return response.json(); // Parse the JSON data from the response
-        } else {
-          throw new Error('POST request failed!');
-        }
-      })
-      .then((data) => {
-        // Process the response data here if needed
-        console.log('POST request successful!', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error.message);
-        // Handle the error scenario
-      });
-  });
-</script>
-
+        <script>
+          const pricingForm = document.getElementById('pricingForm');
+        
+          pricingForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+        
+            const formData = new FormData(pricingForm);
+        
+            // Check the number of existing pricing items before submitting
+            fetch('http://localhost:3000/api/pricing/pricing')
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error('Failed to fetch pricing data');
+                }
+                return response.json();
+              })
+              .then((data) => {
+                if (data.length >= 6) {
+                  // Display a SweetAlert error message when the user tries to post more than 6 rows
+                  Swal.fire({
+                    title: 'Error',
+                    text: 'You can only post up to 6 pricing items. Please delete some items to make space for new ones.',
+                    icon: 'error',
+                  });
+                } else {
+                  // If the limit is not exceeded, proceed with the form submission
+                  fetch('http://localhost:3000/api/pricing/pricing', {
+                    method: 'POST',
+                    body: formData,
+                  })
+                    .then((response) => {
+                      pricingForm.reset();
+                      if (response.ok) {
+                        return response.json(); // Parse the JSON data from the response
+                      } else {
+                        throw new Error('POST request failed!');
+                      }
+                    })
+                    .then((data) => {
+                      // Process the response data here if needed
+                      console.log('POST request successful!', data);
+        
+                      // Display a success SweetAlert message
+                      Swal.fire({
+                        title: 'Success',
+                        text: 'Pricing item posted successfully!',
+                        icon: 'success',
+                      });
+                    })
+                    .catch((error) => {
+                      console.error('Error:', error.message);
+                      // Handle the error scenario
+                    });
+                }
+              })
+              .catch((error) => {
+                console.error('Error:', error.message);
+              });
+          });
+        </script>
+        
 
 <section class="content-section" id="pricinglist">
-  <h1>pricing  List</h1>
+  <h1>Pricing List</h1>
   <table>
     <thead>
       <tr>
-        <th>id</th>
+        <th>ID</th>
         <th>Image</th>
-        <th>title</th>
-        <th>subtitle</th>
-        <th>terms_and_conditions</th>
-        <th>price</th>
+        <th>Title</th>
+        <th>Subtitle</th>
+        <th>Terms and Conditions</th>
+        <th>Price</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody id="pricingListTableBody">
       
     </tbody>
-
   </table>
-  <div id="pagination">
-
-  </div>
+  <div id="pagination"></div>
 </section>
+
+<script>
+  function fetchAndPopulatePricingList() {
+    fetch('http://localhost:3000/api/pricing/pricing')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch pricing data');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const tableBody = document.getElementById('pricingListTableBody');
+        tableBody.innerHTML = '';
+
+        let startingSerialNumber = 1; // Initialize the starting serial number
+
+        data.forEach(pricingEntry => {
+          const newRow = document.createElement('tr');
+          // Populate table rows with pricing data here
+          newRow.innerHTML = `
+            <td>${startingSerialNumber}</td>
+            <td><img src="data:image/png;base64,${encodeImageToBase64(pricingEntry.image.data)}" alt="${pricingEntry.title}" /></td>
+            <td>${pricingEntry.title}</td>
+            <td>${pricingEntry.subtitle}</td>
+            <td>${pricingEntry.terms_and_conditions}</td>
+            <td>${pricingEntry.price}</td>
+            <td>
+              <button class="action-button" onclick="openEditModal(${pricingEntry.id})">Edit</button>
+              <button class="action-button" onclick="deletePricingEntry(${pricingEntry.id})">Delete</button>
+            </td>
+          `;
+          tableBody.appendChild(newRow);
+          startingSerialNumber++;
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error.message);
+      });
+  }
+
+  function encodeImageToBase64(imageData) {
+    let binary = '';
+    for (let i = 0; i < imageData.length; i++) {
+      binary += String.fromCharCode(imageData[i]);
+    }
+    return window.btoa(binary);
+  }
+
+  // Call the fetchAndPopulatePricingList function to fetch and populate pricing data
+  fetchAndPopulatePricingList();
+</script>
+
 
 <section class="content-section" id="storieslist">
   <h1>Stories List</h1>
@@ -492,7 +820,7 @@
 
 <script>
   function fetchAndPopulateStoriesList() {
-    fetch('http://18.214.88.216:80/api/stories/stories')
+    fetch('http://localhost:3000/api/stories/stories')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch stories data');
@@ -558,43 +886,6 @@
   </div>
 
 
-
-
-    
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    function loadContent(contentType) {
-      var mainContent = document.getElementById("main-content");
-      var sections = mainContent.getElementsByClassName("content-section");
-  
-      for (var i = 0; i < sections.length; i++) {
-        sections[i].classList.remove("active");
-      }
-  
-      var contentSection = document.getElementById(contentType);
-      contentSection.classList.add("active");
-  
-      if (contentType === 'pricinglist') {
-        fetchAndPopulatePricingList(); // Call the new function to fetch and populate the pricing list
-      } else if (contentType === 'storieslist') {
-        fetchAndPopulateStoriesList(); // Call the new function to fetch and populate the stories list
-      }
-    }
-  
-    function fetchAndPopulatePricingList() {
-   
-    }
-  
-    function fetchAndPopulateStoriesList() {
-      
-    }
-  </script>
-  
-  
-
-
-
-
 <!-- Edit Modal for pricing -->
 <div id="editModal" class="modal">
   <div class="modal-contents">
@@ -627,7 +918,7 @@
     const editModal = document.getElementById('editModal');
     editModal.style.display = 'block';
  
-    fetch(`http://18.214.88.216:80/api/pricing/pricings/${entryId}`)
+    fetch(`http://localhost:3000/api/pricing/pricings/${entryId}`)
       .then(response => response.json())
       .then(pricingEntry => {
         // Populate form fields with the retrieved data
@@ -663,7 +954,7 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
     
     const entryId = document.getElementById('editEntryId').value; // Retrieve entryId from the hidden input field
 
-    fetch(`http://18.214.88.216:80/api/pricing/pricing/${entryId}`, {
+    fetch(`http://localhost:3000/api/pricing/pricing/${entryId}`, {
       method: 'PUT',
       body: formData,
     })
@@ -678,73 +969,6 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
 });
 
 </script>
-
-
-
-
-
-
-<script>
-  // Function to fetch and populate the pricing list
-  function fetchAndPopulatePricingList() {
-    fetch('http://18.214.88.216:80/api/pricing/pricing')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch pricing data');
-        }
-        return response.json();
-      })
-      .then(data => {
-        const tableBody = document.getElementById('pricingListTableBody');
-        tableBody.innerHTML = '';
-
-        let startingSerialNumber = 1; // Initialize the starting serial number
-
-        data.forEach(pricingEntry => {
-          const newRow = document.createElement('tr');
-
-          const idCell = document.createElement('td');
-          idCell.textContent = startingSerialNumber; // Use the serial number
-          newRow.appendChild(idCell);
-
-          const imageCell = document.createElement('td');
-          const imageElement = document.createElement('img');
-          const imageData = new Uint8Array(pricingEntry.image.data);
-          const base64Image = encodeImageToBase64(imageData);
-          imageElement.src = `data:image/png;base64,${base64Image}`;
-          imageElement.alt = 'Pricing Image';
-          imageElement.style.maxWidth = '100px';
-          imageCell.appendChild(imageElement);
-          newRow.appendChild(imageCell);
-
-          newRow.innerHTML += `
-            <td>${pricingEntry.title}</td>
-            <td>${pricingEntry.subtitle}</td>
-            <td>${pricingEntry.terms_and_conditions}</td>
-            <td>${pricingEntry.price}</td>
-            <button data-id="${pricingEntry.id}" onclick="openEditModal(this.dataset.id)">Edit</button>
-            <button onclick="deletePricingEntry(${pricingEntry.id})">Delete</button>
-          `;
-
-          tableBody.appendChild(newRow);
-          startingSerialNumber++;
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error.message);
-      });
-  }
-
-  // Function to encode the Uint8Array image data to base64
-  function encodeImageToBase64(imageData) {
-    let binary = '';
-    for (let i = 0; i < imageData.length; i++) {
-      binary += String.fromCharCode(imageData[i]);
-    }
-    return window.btoa(binary);
-  }
-</script>
-
 
 
 <script>
@@ -764,9 +988,6 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
     stories.reset();
   });
 </script>
-
-
-
 
 <!--Add Album by storyId-->
 <div id="AddAlbum" class="modal" style="width: 40%; margin: auto;">
@@ -821,7 +1042,7 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
 
     formData.append('sid', sid);
 
-    fetch(`http://18.214.88.216:80/api/photos/photos/${sid}`, {
+    fetch(`http://localhost:3000/api/photos/photos/${sid}`, {
       method: 'POST',
       body: formData,
     })
@@ -885,7 +1106,7 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
 // Function to open the edit form and populate it with data
 function openStoriesModal(storyId) {
   // Fetch the story data for the selected storyId
-  fetch(`http://18.214.88.216:80/api/stories/${storyId}`)
+  fetch(`http://localhost:3000/api/stories/${storyId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch story data');
@@ -917,7 +1138,7 @@ document.getElementById('editStoryForm').addEventListener('submit', function (e)
   const storyId = formData.get('sid');
 
   // Send a PUT request to update the story
-  fetch(`http://18.214.88.216:80/api/stories/${storyId}`, {
+  fetch(`http://localhost:3000/api/stories/${storyId}`, {
     method: 'PUT',
     body: formData,
   })
@@ -968,7 +1189,7 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
     }).then((willUpdate) => {
         if (willUpdate) {
             // Make the PUT request
-            fetch(`http://18.214.88.216:80/api/pricing/pricing/${entryId}`, {
+            fetch(`http://localhost:3000/api/pricing/pricing/${entryId}`, {
                 method: 'PUT',
                 body: formData,
             })
@@ -988,165 +1209,85 @@ document.getElementById('pricingForm').addEventListener('submit', function(event
 });
 </script>
 
-<script>
-function deleteAppointmentEntry(id) {
-  Swal.fire({
-    title: 'Are you sure?',
-    text: 'You will not be able to recover this appointment entry!',
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'No, cancel',
-    reverseButtons: true,
-    customClass: {
-      popup: 'custom-sweet-alert',
-    },
-  }).then((result) => {
-    if (result.isConfirmed) {
-      fetch(`http://18.214.88.216:80/api/appointment/appointment/${id}`, {
-        method: 'DELETE',
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Failed to delete Appointment story entry');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log('Appointment entry deleted successfully:', data);
-          fetchAndPopulateTable();
+<section class="content-section" id="images">
+  <form id="imageForm"> 
+    <h1>Add Index</h1><!-- Change the form ID to "imageForm" -->
+    <div class="form-group">
+      <label for="photo">Photo:</label>
+      <input type="file" class="form-control" id="image_data" name="image_data" accept="image/*">
+    </div>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+   <div class="popup-modal" id="popupModal">
+    <div class="popup-content">
+      <h2>Thank You!</h2>
+      <p>Your form has been submitted successfully.</p>
+      <button type="button" class="close-btn" id="closeBtn">Close</button>
+    </div>
+  </div>
 
-          // Update the row indices
-          const rows = document.querySelectorAll('#appointmentTableBody tr');
+<table>
+  <thead>
+      <tr>
+          <th>Image</th>
+      </tr>
+  </thead>
+  <tbody id="imageContainer">
+      <!-- Rows will be populated here -->
+  </tbody>
+</table>
 
-          // Get the index of the row to be deleted
-          const deletedRowIndex = rows.indexOf(event.target.parentElement.parentElement);
 
-          // Decrement the index number of all rows after the deleted row
-          for (let i = deletedRowIndex + 1; i < rows.length; i++) {
-            const row = rows[i];
-            const indexCell = row.querySelector('.index-cell');
-            if (indexCell) {
-              indexCell.textContent = i;
-            }
-          }
-        })
-        .catch((error) => {
-          console.error('Error:', error.message);
-        });
+
+</section>
+
+
+
+
+
+ 
+
+
+  <script>
+    function loadContent(contentType) {
+      var mainContent = document.getElementById("main-content");
+      var sections = mainContent.getElementsByClassName("content-section");
+  
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+        sections[i].style.display = "none"; // Hide all sections
+      }
+  
+      var contentSection = document.getElementById(contentType);
+      contentSection.classList.add("active");
+      contentSection.style.display = "block"; // Show the selected section
+  
+      if (contentType === 'pricinglist') {
+        fetchAndPopulatePricingList();
+      } else if (contentType === 'storieslist') {
+        fetchAndPopulateStoriesList();
+      }
     }
-  });
-}
-  document.getElementById('appointmentTableBody').addEventListener('click', function (event) {
-    if (event.target && event.target.matches('button.delete-btn')) {
-      const appEntryId = event.target.dataset.id;
-      deleteAppointmentEntry(appEntryId);
+  
+    function fetchAndPopulatePricingList() {
+      // Your pricing list logic here
     }
-  });
+  
+    function fetchAndPopulateStoriesList() {
+      // Your stories list logic here
+    }
+  
+ 
+
   </script>
-        
 
 
-<!-- to delete contacts -->
-<script>
- 
-  function deleteContactEntry(id) {
-   // Use SweetAlert for confirmation
-   Swal.fire({
-     title: 'Are you sure?',
-     text: 'You will not be able to recover this contact entry!',
-     icon: 'warning',
-     showCancelButton: true,
-     confirmButtonText: 'Yes, delete it!',
-     cancelButtonText: 'No, cancel',
-     reverseButtons: true,
-     customClass: {
-         popup: 'custom-sweet-alert', // Add your custom class here
-       },
-   }).then((result) => {
-     if (result.isConfirmed) {
-       // User confirmed, proceed with deletion
-       fetch(`http://18.214.88.216:80/api/contactus/contact/${id}`, {
-         method: 'DELETE',
-       })
-         .then((response) => {
-           if (!response.ok) {
-             throw new Error('Failed to delete Contact story entry');
-           }
-           return response.json();
-         })
-         .then((data) => {
-           console.log('Contact entry deleted successfully:', data);
-           // After successful deletion, re-fetch and populate the table
-           fetchAndPopulateTable();
-         })
-         .catch((error) => {
-           console.error('Error:', error.message);
-         });
-     }
-   });
- }
- 
- // Attach the deleteContactEntry() function to the onclick event of each delete button in the contact list
- document.getElementById('contactTableBody').addEventListener('click', function (event) {
-   if (event.target && event.target.matches('button.delete-btn')) {
-     const conEntryId = event.target.dataset.id;
-     deleteContactEntry(conEntryId);
-   }
- });
- 
- </script> 
- 
- <!-- to delete pricing entry -->
-<script>
-  function deletePricingEntry(id) {
-   // Use SweetAlert for confirmation
-   Swal.fire({
-     title: 'Are you sure?',
-     text: 'You will not be able to recover this pricing entry!',
-     icon: 'warning',
-     showCancelButton: true,
-     confirmButtonText: 'Yes, delete it!',
-     cancelButtonText: 'No, cancel',
-     reverseButtons: true,
-     customClass: {
-         popup: 'custom-sweet-alert', // Add your custom class here
-       },
-   }).then((result) => {
-     if (result.isConfirmed) {
-       // User confirmed, proceed with deletion
-       const url = `http://18.214.88.216:80/api/pricing/pricing/${id}`;
-       const method = 'DELETE';
- 
-       fetch(url, {
-         method,
-       })
-         .then((response) => {
-           if (!response.ok) {
-             throw new Error('Failed to delete pricing entry');
-           }
-           return response.json();
-         })
-         .then((data) => {
-           console.log('Pricing entry deleted successfully:', data);
-           // After successful deletion, re-fetch and populate the pricing list
-           fetchAndPopulatePricingList();
-         })
-         .catch((error) => {
-           console.error('Error:', error.message);
-         });
-     }
-   });
- }
- 
- </script>
- 
- </script>
- 
- 
- <!-- to delete stories  -->
- <script>
-   function deleteStoryEntry(id) {
+
+
+  <script>
+   function deleteImageEntry(id) {
      // Use SweetAlert for confirmation
      Swal.fire({
        title: 'Are you sure?',
@@ -1162,7 +1303,7 @@ function deleteAppointmentEntry(id) {
      }).then((result) => {
        if (result.isConfirmed) {
          // User confirmed, proceed with deletion
-         fetch(`http://18.214.88.216:80/api/stories/stories/${id}`, {
+         fetch(`http://localhost:3000/api/images/images/${id}`, {
            method: 'DELETE',
          })
            .then((response) => {
@@ -1184,18 +1325,16 @@ function deleteAppointmentEntry(id) {
    }
  
    // Attach the deleteStoryEntry() function to the onclick event of each delete button in the stories list
-   document.getElementById('storiesListTableBody').addEventListener('click', function (event) {
+   document.getElementById('imageContainer').addEventListener('click', function (event) {
      if (event.target && event.target.matches('button.delete-btn')) {
        const storyEntryId = event.target.dataset.id;
-       deleteStoryEntry(storyEntryId);
+       deleteImageEntry(storyEntryId);
      }
    });
  </script>
  
-   </script> 
-
-
-
+</script>
+</div>
 
 </body>
 </html>

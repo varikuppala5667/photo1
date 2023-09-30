@@ -3,6 +3,8 @@ const router = express.Router();
 const mysql = require("mysql2");
 const cors = require("cors");
 
+
+
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root", // Replace with your MySQL username
