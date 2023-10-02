@@ -7,7 +7,7 @@ const cors = require("cors");
 
 
 const connection = mysql.createConnection({
-  host: "jdbc:mysql://database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com:3306",
+  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
   user: "admin2", // Replace with your MySQL username
   password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
   database: "testingDb",
