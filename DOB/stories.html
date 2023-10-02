@@ -100,7 +100,7 @@
 <!--     
     <script>
        function fetchAndPopulateStoriesList() {
-    fetch('http://13.233.102.186.8080/api/stories/stories')
+    fetch('http://13.233.102.186:8080/api/stories/stories')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch stories data');
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', fetchAndPopulateStoriesList);
     
     <script>
         function fetchAndPopulateStoriesList() {
-          fetch('http://13.233.102.186.8080/api/stories/stories')
+          fetch('http://13.233.102.186:8080/api/stories/stories')
             .then(response => {
               if (!response.ok) {
                 throw new Error('Failed to fetch stories data');
