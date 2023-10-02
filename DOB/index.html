@@ -11,12 +11,15 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
       <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("shareIcon").addEventListener("click", function() {
@@ -168,7 +171,7 @@
   // Function to fetch images from the server and populate the dynamic carousel
   function fetchAndPopulateImages() {
     // Make a GET request to your backend's /images endpoint
-    fetch('http://localhost:3000/api/images/images')
+    fetch('http://13.233.102.186.8080/api/images/images')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch images');
@@ -243,7 +246,7 @@
     // Function to fetch images from the server
     function fetchImages() {
         // Make a GET request to your backend's /images endpoint
-        fetch('http://localhost:3000/api/images/images')
+        fetch('http://13.233.102.186.8080/api/images/images')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch images');
@@ -277,9 +280,18 @@
         <div class="text-container">
             <p class="animated-text">Today's Moments are Tomorrow's</p>
             <p class="tt">Memories</p>
-            <p><a href="index.html"><button class="name">Freeze the moment</button></a></p>
-</div>
-
+            <p><a href="index.html"><button class="name" style="padding-bottom: 20px;">Freeze the moment</button></a></p>
+        </div>
+    
+      <script>
+        // JavaScript to remove the text after a delay
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    var textContainer = document.querySelector('.text-container');
+    textContainer.style.display = 'none';
+  }, 5000); // Adjust the delay (in milliseconds) as needed
+});
+</script>
 
       
 <div class="container">

@@ -125,63 +125,115 @@
   }
   .text-container {
     position: absolute;
-    left: 50px;
-    top: 70%;
     transform: translateY(-70%);
-    color: #fff;
-    font-size: 24px;
+   font-size: 24px;
     text-align: left;
     z-index: 2;
-    padding-left: 70px;
-    padding-left:330px;
+    margin-left: 950px;
+  
+    margin-top: -100px;
+
  
   }
-.animated-text{
-    animation: fadeInOut 3s infinite;
-    font-family: "Great Vibes";
-    transform-origin: 50% 50%;
-    opacity: 1;
-    transform: translate(0px, 0px);
-    color: rgb(209, 209, 209);
-    float:right;
-    padding-left:330px;
-}
-.name{
-    margin-left:600px;
-
-    height: auto !important;
-}
-.name {
-    opacity: 0; /* Hidden initially */
-    transition: opacity 1s ease-in-out; /* Transition effect with 1 second duration */
-}
-
-/* Define a class to trigger the animation */
-.fade-in {
-    opacity: 1;
-   
-}
-.tt{
-    animation: fadeInOut 3s infinite;
-    font-family: "Great Vibes";
-    transform-origin: 50% 50%;
-    opacity: 1;
-    transform: translate(0px, 0px);
-    color: rgb(209, 209, 209);
-    padding-left:700px;
-
-}
-
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+/* Keyframes for the animations */
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
-.text-container button{
-    background: none;
-    color: #fff;
-    border-radius: 10px;
-    padding: 2px 10px;
-} 
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animations to the text elements */
+ /* Hide the text initially */
+.animated-text,
+.tt,
+.name {
+  opacity: 0;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to the text elements */
+.animated-text {
+  font-size:28px;
+  color: #888686;
+  margin: 0;
+  padding: 0;
+  animation: slideInFromTop 1.5s ease-out forwards, fadeIn 1s ease-out forwards;
+  font-family: 'Great Vibes', cursive; /* Use the Pacifico cursive font */
+  font-style: italic; 
+
+}
+
+.tt {
+  font-size: 35px;
+  color: #888686;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  animation: slideInFromTop 1.5s ease-out 1s forwards, fadeIn 1s ease-out 1s forwards;
+ 
+}
+
+.name {
+height:40px;
+  color: rgb(5, 4, 4);
+  border: 1px solid black;
+  font-size: 18px;
+ 
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-bottom:20px;
+background-color: white;
+  animation: slideInFromBottom 1.5s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
+}
+
+/* Hover effect for the button */
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
   .kenburns{
     display: flex;
     background-color: #0090D2;

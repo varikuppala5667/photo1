@@ -10,6 +10,8 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
@@ -94,6 +96,20 @@
   
     </div>
 
+    <div id="previewModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img src="" id="previewImage" class="preview-image">
+            </div>
+           
+          </div>
+          <button class="carousel-btn carousel-prev-btn"><i class="material-icons">keyboard_arrow_left</i></button>
+          <button class="carousel-btn carousel-next-btn"><i class="material-icons">keyboard_arrow_right</i></button>
+        </div>
+      </div>
+
     <div class="container first">
         <div class="row">
         <div class="col-md-10">
@@ -105,39 +121,39 @@
 <div class="container second">
     <div class="row image-container" style="padding-left: 15px;">
         <div class="col-md-6">
-            <img src="images/1L9A0965.jpg" width="110%" height="300px">
+            <img src="images/1L9A0965.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
         <div class="col-md-6 star">
-            <img src="images/1L9A0440.jpg" width="110%" height="300px">
+            <img src="images/1L9A0440.jpg" width="110%" height="300px" class="image overlay">
         </div>
-        </div>
+    </div>
+</div>
+
+
+<div class="container third">
+    <div class="row image-container" style="padding-left: 15px;">
+        <div class="col-md-6">
+            <img src="images/1L9A0012.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
-        <div class="container third">
-        <div class="row   image-container" style="padding-left: 15px;">
-            <div class="col-md-6">
-                <img src="images/1L9A0012.jpg" width="110%" height="300px">
-            </div>
-    
-            <div class="col-md-6 star">
-                <img src="images/1L9A325.jpg" width="110%" height="300px">
-            </div>
-            </div>
+        <div class="col-md-6 star">
+            <img src="images/1L9A325.jpg" width="110%" height="300px" class="image overlay">
+        </div>
+    </div>
+</div>
+
+<div class="container fourth">
+    <div class="row image-container" style="padding-left: 15px;">
+        <div class="col-md-6">
+            <img src="images/1L9A5552.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
-        
-        <div class="container fourth">
-            <div class="row   image-container" style="padding-left: 15px;">
-                <div class="col-md-6">
-                    <img src="images/1L9A5552.jpg" width="110%" height="300px">
-                </div>
-        
-                <div class="col-md-6 star">
-                    <img src="images/1L9A4809.jpg" width="110%" height="300px">
-                </div>
-                </div>
-            </div>
+        <div class="col-md-6 star">
+            <img src="images/1L9A4809.jpg" width="110%" height="300px" class="image overlay">
+        </div>
+    </div>
+</div>
 
 
 <div class="container-fluid usha">
@@ -159,45 +175,7 @@
         </div>
     </div>
 
-<!--     
-<div class="container-fluid two">
-    <div class="container">
-        <div class="row">
-            <div class="grid-container">
-               
-                <div class="grid-item"> <img src="images/g1.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/n6.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/g2.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/g3.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n6.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/g4.jpg" width="80%" height="240px"></div>  
-              </div>
-            </div>
-        </div>
-    </div> -->
 
-    <!-- <div class="container-fluid three">
-        <div class="container">
-            <div class="row">
-                <div class="grid-container">
-                   
-                    <div class="grid-item"> <img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"> <img src="images/g5.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"> <img src="images/n7.jpg" width="80%" height="240px"></div>  
-                    <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>  
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n6.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>  
-                  </div>
-                </div>
-            </div>
-        </div> -->
-      
 
 <!--Single Line-->
 <div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
@@ -271,3 +249,68 @@
     </div>
 </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Get references to elements
+    var modal = $('#previewModal');
+    var previewImage = $('#previewImage');
+    var prevButton = $('.carousel-prev-btn');
+    var nextButton = $('.carousel-next-btn');
+
+    // Initialize the current image index
+    var currentIndex = 0;
+
+    // Array of image sources from your containers
+    var imageSources = [
+      'images/1L9A0965.jpg',
+      'images/1L9A0440.jpg',
+      'images/1L9A0012.jpg',
+      'images/1L9A325.jpg',
+      'images/1L9A5552.jpg',
+      'images/1L9A4809.jpg',
+      // Add more image paths here
+    ];
+
+    // Function to update the preview image
+    function updatePreview() {
+      previewImage.attr('src', imageSources[currentIndex]);
+    }
+
+    // Previous button click event
+    prevButton.click(function () {
+      currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+      updatePreview();
+    });
+
+    // Next button click event
+    nextButton.click(function () {
+      currentIndex = (currentIndex + 1) % imageSources.length;
+      updatePreview();
+    });
+
+    // Open the modal when an image in a container is clicked
+    $('.image.overlay').click(function () {
+      currentIndex = $('.image.overlay').index(this);
+      updatePreview();
+      modal.css('display', 'block');
+    });
+
+    // Close the modal when the close button is clicked
+    $('.close').click(function () {
+      modal.css('display', 'none');
+    });
+
+    // Close the modal when the user clicks outside of it
+    $(window).click(function (event) {
+      if (event.target === modal[0]) {
+        modal.css('display', 'none');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

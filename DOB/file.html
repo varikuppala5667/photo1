@@ -109,7 +109,7 @@
     const storyId = urlParams.get('id');
 
     // Fetch the image for the story and set it as the src of the image element
-    fetch(`http://localhost:3000/api/photos/photos/${storyId}`)
+    fetch(`http://13.233.102.186.8080/api/photos/photos/${storyId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch story data');
@@ -151,7 +151,7 @@
     }
 
   // Fetch the story details and populate title and subtitle
-  fetch(`http://localhost:3000/api/stories/stories/${storyId}`)
+  fetch(`http://13.233.102.186.8080/api/stories/stories/${storyId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch story data');
