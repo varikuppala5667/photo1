@@ -45,7 +45,7 @@ function startServer() {
   app.use('/api/stories', storiesRoutes);
   app.use('/api/photos', photostories)
 app.use('/api/images',imagesRoutes)
-  const port = 3000;
+  const port = 8080;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });

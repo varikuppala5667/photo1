@@ -134,7 +134,7 @@
 <div class="container third">
     <div class="row image-container" style="padding-left: 15px;">
         <div class="col-md-6">
-            <img src="images/1L9A0012.jpg" width="110%" height="300px" class="image overlay">
+            <img src="images/11x15-2.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
         <div class="col-md-6 star">
@@ -161,20 +161,44 @@
         <div class="row">
             <div class="grid-container">
                
-                <div class="grid-item"> <img src="images/1L9A0011.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/1L9A325.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/1L9A0012.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/1L9A0032.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/1L9A1918.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/11x15-3.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/DSC03770.jpg" width="80%" height="240px"></div>  
+                <div class="grid-item"><img src="images/1L9A6042.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A3338.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A4703.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/1L9A5269.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"><img src="images/1L9A7991.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A4690.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A1949.jpg" width="80%" height="240px"></div>  
               </div>
             </div>
         </div>
     </div>
-
+    <script>
+        // Get references to the modal and the preview image element
+        const modal = document.getElementById('previewModal');
+        const previewImage = document.getElementById('previewImage');
+    
+        // Get references to the grid images
+        const gridImages = document.querySelectorAll('.grid-item img');
+    
+        // Attach click event listeners to each grid image
+        gridImages.forEach((image, index) => {
+          image.addEventListener('click', () => {
+            // Set the src attribute of the preview image
+            previewImage.src = image.src;
+    
+            // Show the modal
+            modal.style.display = 'block';
+          });
+        });
+    
+        // Close the modal when the close button is clicked
+        const closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+      </script>
 
 
 <!--Single Line-->
