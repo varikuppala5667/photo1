@@ -9,10 +9,10 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 // Replace with your MySQL connection configuration
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1234",
-  database: "photography",
+  host: "jdbc:mysql://database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com:3306",
+  user: "admin2", // Replace with your MySQL username
+  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
+  database: "testingDb",
 });
 router.use(cors());
 
