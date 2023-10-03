@@ -1,12 +1,11 @@
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root", // Replace with your MySQL username
-  password: "1234", // Replace with your MySQL password
-  database: "photography",
+  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
+  user: "admin2", // Replace with your MySQL username
+  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
+  database: "testingDb",
 });
-
 connection.connect((err) => {
   if (err) {
     console.error("Error connecting to MySQL:", err);
@@ -33,7 +32,7 @@ function createTables() {
   )
 `;
 
-  const createContactUsTableQuery = `
+  const createCONTACTUSTableQuery = `
 CREATE TABLE IF NOT EXISTS contact_us (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -57,7 +56,7 @@ const createPricingTableQuery = `
 CREATE TABLE IF NOT EXISTS pricing (
   id INT AUTO_INCREMENT PRIMARY KEY,
   image LONGBLOB,
-  title VARCHAR(255) NOT NULL,
+  title TEXT NOT NULL,
   price INT,
   subtitle VARCHAR(255) NOT NULL,
   terms_and_conditions TEXT NOT NULL
@@ -97,7 +96,7 @@ CREATE TABLE IF NOT EXISTS images (
     }
   });
 
-  connection.query(createContactUsTableQuery, (err, results) => {
+  connection.query(createCONTACTUSTableQuery, (err, results) => {
     if (err) {
       console.error("Error creating contact_us table:", err);
     } else {

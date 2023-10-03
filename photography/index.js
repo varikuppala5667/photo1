@@ -14,10 +14,10 @@ const mysql = require("mysql2");
 
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root", // Replace with your MySQL username
-  password: "1234", // Replace with your MySQL password
-  database: "photography",
+  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
+  user: "admin2", // Replace with your MySQL username
+  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
+  database: "testingDb",
 });
 
 connection.connect((err) => {
@@ -45,8 +45,13 @@ function startServer() {
   app.use('/api/stories', storiesRoutes);
   app.use('/api/photos', photostories)
 app.use('/api/images',imagesRoutes)
-  const port = 3000;
+const IP_ADDRESS = '13.233.102.186';
+  const port = 8080;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+  });
+
+  app.listen(PORT, IP_ADDRESS, () => {
+    console.log(`Server is running on http://${IP_ADDRESS}:${PORT}`);
   });
 }

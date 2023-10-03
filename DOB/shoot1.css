@@ -1,0 +1,562 @@
+.navbar{
+    color: white;
+   
+}
+
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    transition: padding 0.6s;
+}
+.nav-item .nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+.img-fluid{
+    width: 19%;
+    height:40px;
+   
+}
+/* Add this CSS to your existing styles or style tag */
+.nav-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+    border: none;
+   
+}
+.navbar-nav .nav-link:hover {
+    border:1px solid #0d0e0d; 
+ 
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid #000;
+}
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    background-color: #f4f6f7;
+    border-top: 1px solid #dfe5e8;
+    line-height: 43px;
+}
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-menu li:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-left: 3px solid #000;
+}
+
+.portfolio{
+    background-color: #ededed;
+    height: 140px;
+}
+.portfolio h3{
+    padding-top: 45px;
+    padding-left: 40px;
+       font-family: 'Montserrat';
+}
+.anchor{
+    display: flex;
+   
+    margin-left: 40px;
+}
+.anchor i{
+    padding-top: 5px;
+}
+.anchor a{
+    text-decoration: none;
+    color: #000;
+}
+.active{
+    border-bottom: 2px solid #000;
+    padding-bottom: 7px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum width as needed */
+    gap: 10px; /* Adjust the gap between images */
+    margin-left:-50px;
+
+}
+
+/* Style for individual gallery items */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 400px); /* Set width to 400px for each column */
+    gap: 5 px; /* Adjust the gap between images */
+}
+
+/* Style for individual gallery items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.portfolio{
+    background-color: #ededed;
+    height: 140px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.portfolio h2{
+    font-family: 'Montserrat';
+}
+
+/* Style for the gallery images */
+.gallery-item img {
+    width: 100%; /* Set the width to 100% to maintain the same width for all images */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Style for hover effect (optional) */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Define different heights for each gallery item */
+.gallery-item:nth-child(1) img {
+    height: 300px;
+}
+
+.gallery-item:nth-child(2) img {
+    height: 250px;
+}
+
+.gallery-item:nth-child(3) img {
+    height: 350px;
+}
+
+.gallery-item:nth-child(7) {
+    margin-top: -280px; /* Decrease the gap between 4th and 7th images */
+}
+.gallery-item:nth-child(5){
+    margin-top: -100px;
+}
+
+.gallery-item:nth-child(4){
+    margin-top: -50px;
+}
+
+.gallery-item:nth-child(9){
+    margin-top: -230px;
+}
+
+.gallery-item:nth-child(10){
+    margin-top: -610px;
+}
+.gallery-item:nth-child(12){
+    margin-top: -560px;
+    height:400px;
+}
+
+.gallery-item:nth-child(13){
+    margin-top: -610px;
+}
+
+.gallery-item:nth-child(15){
+    margin-top: -420px;
+}
+
+
+.gallery-item:nth-child(14){
+    margin-top: -1020px;
+}
+
+.gallery-item:nth-child(16){
+    margin-top: -300px;
+}
+
+.gallery-item:nth-child(17){
+    margin-top: -100px;
+}
+
+.gallery-item:nth-child(18){
+    margin-top: -120px;
+}
+
+.gallery-item:nth-child(19){
+    margin-top: -300px;
+}
+
+.gallery-item:nth-child(20){
+    margin-top: -210px;
+}
+
+.gallery-item:nth-child(21){
+    margin-top:-20px;
+}
+
+.gallery-item:nth-child(22){
+    margin-top:-300px;
+}
+
+.gallery-item:nth-child(23){
+    margin-top:-180px;
+}
+
+
+.gallery-item:nth-child(25){
+    margin-top:-260px;
+}
+
+.gallery-item:nth-child(26){
+    margin-top:-180px;
+}
+
+.gallery-item:nth-child(28){
+    margin-top:-160px;
+}
+
+.gallery-item:nth-child(29){
+    margin-top:10px;
+}
+
+.gallery-item:nth-child(30){
+    margin-top:-340px;
+}
+
+
+
+
+/* Initial state for gallery items */
+.gallery-item {
+    opacity: 0;
+    transform: translateY(20px); /* Start with some vertical offset */
+    transition: opacity 3s, transform 3s; /* Adjust the transition duration as needed */
+  }
+  
+  /* Animation for the show class */
+  .gallery-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+
+
+.footer{
+    height: 450px;
+}
+.footerimg{
+    margin-top: 29px;
+}
+.footerh3{
+    border-bottom: 1px solid rgb(45, 43, 43);
+    margin-top: 55px;
+    color: #0090D2;
+    padding-bottom: 19px;
+}
+.footerpara{
+    font-size: 13px;
+    text-align: justify;
+    font-family: Verdana, sans-serif;
+    font-weight: 300;
+}
+.socialfooter{
+    cursor: pointer;
+    color: #000;
+}
+.footerservice{
+    list-style: none;
+    padding-left: 0px;
+}
+.footerservice li{
+    padding: 10px;
+}
+.footerservice p{
+    font-size: 14px;
+}
+.footerservice h5{
+    font-size: 18px;
+       font-family: 'Montserrat';
+}
+.footerservice a{
+    text-decoration: none;
+    color: #000;
+}
+.footerservice a:hover{
+    color: #e9d607;
+}
+.fa-angle-right{
+    font-size: 10px;
+}
+.fa-map-marker , .fa-phone , .fa-envelope , .fa-globe{
+    color: rgb(44, 165, 159);
+}
+.lastfooter{
+    padding: 25px;
+}
+.socialfooter a{
+    color: #000;
+    font-size: 25px;
+}
+.socialfooter a:hover{
+    opacity: 0.5;
+}
+/* Style the "local_see" icon */
+.material-icons {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: rgb(60, 60, 202);
+    margin-top: 200px; /* Change the color to your desired color */
+  }
+  
+  /* Style the "shareIcon3" icon by ID */
+  #shareIcon3 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: green; /* Change the color to your desired color */
+  }
+  
+  /* Style the social icons */
+  .social-icon {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #ff6600; /* Change the color to your desired color */
+  }
+  
+  /* You can style each social icon individually if needed */
+  .fa-facebook {
+    color: #1877f2; /* Facebook color */
+  }
+  
+  .fa-youtube {
+    color: #ff0000; /* YouTube color */
+  }
+  
+  .fa-instagram {
+    color: #bc2a8d; /* Instagram color */
+  }
+  
+  .fa-whatsapp {
+    color: #25d366; /* WhatsApp color */
+  }
+  
+.to-top{
+    background-color: #989595;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 45px;
+    bottom: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.to-top.active{
+    bottom: 60px;
+    opacity: 1;
+    pointer-events:all;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* Define the sliding animation */
+@keyframes slideIn {
+    0% {
+      transform: translateY(50px); /* Initial position, adjust as needed */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Final position, adjust as needed */
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the gallery items */
+  .gallery-item {
+    animation: slideIn 1s ease-in-out; /* Adjust the animation duration as needed */
+    opacity: 0; /* Start with opacity 0, so items are hidden initially */
+    will-change: transform, opacity; /* Optimize for smoother animations */
+  }
+  
+
+  /* Mobile View */
+@media (max-width: 568px) {
+    /* Adjust the navigation menu */
+    .navbar-collapse {
+      background-color: #fff; /* Change the background color for better visibility */
+    }
+  
+    .navbar-toggler-icon {
+      color: #000; /* Change the color of the navbar toggle icon */
+    }
+  
+    /* Center the logo and reduce its size */
+    .navbar-brand img {
+      width: 150px;
+      margin: 0 auto;
+    }
+  
+    /* Adjust padding and font size for the navigation links */
+    .navbar-nav {
+      padding-top: 10px;
+    }
+  
+    .nav-link {
+      font-size: 14px;
+      padding: 5px 0;
+    }
+  
+    /* Adjust the heading size */
+    .portfolio h2 {
+      font-size: 24px;
+    }
+  
+    /* Center align the "REQUEST AN APPOINTMENT" button */
+    .footer button {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    /* Reduce the size of social icons */
+    .socialfooter a i {
+      font-size: 20px;
+    }
+  
+    /* Adjust padding and font size for footer links */
+    .footerpara, .footerservice li {
+      font-size: 14px;
+      padding: 5px 0;
+    }
+  
+    /* Reduce the size of the footer logo */
+    .footer img {
+      width: 150px;
+    }
+  
+    /* Reduce the size of the last footer text */
+    .lastfooter p {
+      font-size: 12px;
+    }
+  }
+/* Mobile View */
+@media (max-width: 568px) {
+
+    .navbar-nav {
+      flex-direction: column;
+      margin-right: 0;
+  }
+
+  .navbar-toggler {
+      margin-right: 15px; 
+  }
+
+ 
+  .navbar-collapse {
+      position: relative;
+  }
+
+  .navbar-nav.ms-auto {
+      margin: 0;
+  }
+
+  .nav-item {
+      position: relative;
+  }
+
+  .nav-item:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      position: static;
+      width: 100%; 
+  }
+
+  .dropdown-menu {
+      position: static;
+      opacity: 1;
+      display: none;
+      width: 100%;
+  }
+
+  .dropdown-menu li {
+      border-top: none; /* Remove the border between dropdown items */
+  }
+
+  .dropdown-menu li a {
+      padding-left: 20px; /* Add a bit more padding for dropdown items */
+  }
+
+  .nav-item.dropdown.active > .nav-link,
+  .nav-item.dropdown:hover > .nav-link {
+      background-color: #f4f6f7;
+      color: #007bff;
+  }
+
+  /* Adjust the background color of the "More" link to match the highlight style */
+  .dropdown-menu .back-button a:hover {
+      background-color: #f4f6f7;
+  }
+
+
+.caret-down-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 35px;
+  vertical-align: middle;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black; /* You can change the color to match your design */
+}
+
+.text-container{
+  display: none;
+}
+.pad15 .carousel-image{
+  width: 100%;
+}
+.lastfooter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0; 
+  background-color: #ededed;
+  color: #000;
+}
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0; /* Reset margin for mobile */
+}
+}
+

@@ -474,7 +474,7 @@ button[type="submit"]:hover {
 }
 
 /* Additional mobile styles for other sections as needed */
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     body {
         padding-top: 70px; /* Adjust as needed */
     }
@@ -533,4 +533,19 @@ margin-top: 20px; /* Adjust the margin for smaller screens */
 }
 
 
+/* Style for the delete button */
+.delete-button {
+  background-color: #f44336; /* Red background color */
+  color: white; /* White text color */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Add some padding around the button text */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+}
+
+/* Style for the delete button on hover */
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red background color on hover */
+}
 

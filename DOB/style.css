@@ -62,7 +62,7 @@
 .texting{
     text-align: center;
     /* margin-top: 200px; */
-    margin-left: 100px;
+    margin-left: 40px;
   }
 
   .texts{
@@ -125,28 +125,115 @@
   }
   .text-container {
     position: absolute;
-    left: 50px;
-    top: 70%;
     transform: translateY(-70%);
-    color: #fff;
-    font-size: 24px;
+   font-size: 24px;
     text-align: left;
     z-index: 2;
-    padding-left: 70px;;
-    animation: fadeInOut 3s infinite;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+    margin-left: 950px;
+  
+    margin-top: -100px;
 
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+ 
   }
-.text-container button{
-    background: none;
-    color: #fff;
-    border-radius: 10px;
-    padding: 2px 10px;
-} 
+/* Keyframes for the animations */
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animations to the text elements */
+ /* Hide the text initially */
+.animated-text,
+.tt,
+.name {
+  opacity: 0;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to the text elements */
+.animated-text {
+  font-size:28px;
+  color: #888686;
+  margin: 0;
+  padding: 0;
+  animation: slideInFromTop 1.5s ease-out forwards, fadeIn 1s ease-out forwards;
+  font-family: 'Great Vibes', cursive; /* Use the Pacifico cursive font */
+  font-style: italic; 
+
+}
+
+.tt {
+  font-size: 35px;
+  color: #888686;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  animation: slideInFromTop 1.5s ease-out 1s forwards, fadeIn 1s ease-out 1s forwards;
+ 
+}
+
+.name {
+height:40px;
+  color: rgb(5, 4, 4);
+  border: 1px solid black;
+  font-size: 18px;
+ 
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-bottom:20px;
+background-color: white;
+  animation: slideInFromBottom 1.5s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
+}
+
+/* Hover effect for the button */
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
   .kenburns{
     display: flex;
     background-color: #0090D2;
@@ -155,6 +242,13 @@
 .navbar{
     color: white;
    
+}
+
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
 }
 .navbar-nav{
     display: flex;
@@ -165,11 +259,13 @@
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
 }
 .img-fluid{
     width: 19%;
-    margin-left: 100px;
+    height:40px;
+   
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
@@ -179,7 +275,7 @@
    
 }
 .navbar-nav .nav-link:hover {
-    border-bottom: 2px solid #0d0e0d; 
+    border:1px solid #0d0e0d; 
  
 }
 .dropdown-menu {
@@ -339,7 +435,7 @@
     display: flex;
 }
 .iconedit i{
-    margin-top: 190px;
+    margin-top: 160px;
     border-radius: 120px;
     padding: 25px;
 }
@@ -490,6 +586,11 @@
     background-color: #ddd;
     height: 900px;
 }
+
+.service h2{
+    font-family: 'Montserrat';
+    font-weight: normal;
+}
 /* .service button{
     padding: 10px;
     border: 1px solid #000;
@@ -502,6 +603,8 @@
 .edita{
     text-align: center;
     padding: 50px;
+    font-weight: normal;
+    font-family: 'Montserrat';
 }
 .line{
     width: 40px;
@@ -691,7 +794,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .footerservice a{
     text-decoration: none;
@@ -794,7 +897,7 @@
 
   .navbar .navbar-fixed{
     transition:1s;
-    height: 100vh;
+    height: 60vh;
   }
 
 #carouselExampleControls{
@@ -803,6 +906,13 @@
 
  #carouselExampleIndicators{
     display:none;
+ }
+.heading{
+    font-family: 'Montserrat';
+}
+ .head h2{
+    text-align: center;
+    font-family: 'Montserrat';
  }
 @media (max-width: 568px) {
 .slider,
@@ -826,6 +936,7 @@
 
     .navbar-collapse {
         position: relative;
+        height:60px;
     }
 
     .navbar-nav.ms-auto {
@@ -911,7 +1022,7 @@
     height: 220px;
     object-fit: cover;
   }
-c
+
   .service button{
   color: #fff;
   border: none

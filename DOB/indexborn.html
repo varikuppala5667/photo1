@@ -10,6 +10,8 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
@@ -17,55 +19,58 @@
 
 </head>
 <body>
-    <div class="container-fluid fixed">
-        <div class="container">
+    <div class="container-fluid fixed" style="background-color: white;">
+     
+      <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
 
-            <nav class="navbar navbar-expand-sm navbar-white fixed-top" style="background-color: white;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="javascript:void(0)">
-                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;height: 70px;margin-top: 10px;">
-                    </a>
+                <div class="container-fluid" style="width:80%;height:60px">
+                
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="mynavbar">
-                        <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="mynavbar" >
+                        <ul class="navbar-nav ms-auto " >
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item dropdown">
-                                
-                                <a class="nav-link" href="#">Service<span class="caret-down-icon"></span></a>
-                                <ul class="dropdown-menu" id="servicesDropdown">
-                                    <li><a href="maternityphoto.html">Maternity Photo Session</a></li>
-                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                    <li class="back-button"><a href="service.html">More</a></li>
-                                </ul>
-                            </li>
-                           
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
-
+                                <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="maternityphoto.html">Maternity Photo Session</a></li>
+                                  
                                     <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
                                     <li><a href="babyphoto.html">Baby Photo Session</a></li>
                                     <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
                                     <li class="back-button"><a href="portfolio.html">More</a></li>
                                 </ul>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="portfolio.html">More</a></li>
+                                </ul>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <li class="nav-item">
                                 <a class="nav-link" href="pricing.html">Pricing</a>
-                            </li>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <a class="navbar-brand" href="javascript:void(0)">
+                                <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
+                            </a>
                             <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About us</a>
-                            </li>
+                                <a class="nav-link" href="aboutus.html">ABOUTDOB</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
-                                <a class="nav-link" href="contactus.html">Contact us</a>
-                            </li>
+                                <a class="nav-link" href="contact us.html">CONTACT US</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
                                 <a class="nav-link" href="stories.html">Stories</a>
                             </li>
@@ -75,10 +80,10 @@
             </nav>
             
             
-
         </div>
-    </div>
-    <div class="container-fluid heading" style="background-color: rgb(229, 230, 229);text-align: center;height: 200px;padding-top: 70px;">
+        </div>
+    </div><br>
+    <div class="container-fluid heading" style="background-color: rgb(229, 230, 229);text-align: center;height: 240px;padding-top: 70px;">
         <h2>AMAZING CLOSE UP PHOTOS OF NEWBORN BABIES</h2><br><br>
 
         <a href="#">home</a>-><a href="#">Newborn baby photos</a>-><a href="#">Amazing close up photos of newborn babies</a>
@@ -91,6 +96,20 @@
   
     </div>
 
+    <div id="previewModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img src="" id="previewImage" class="preview-image">
+            </div>
+           
+          </div>
+          <button class="carousel-btn carousel-prev-btn"><i class="material-icons">keyboard_arrow_left</i></button>
+          <button class="carousel-btn carousel-next-btn"><i class="material-icons">keyboard_arrow_right</i></button>
+        </div>
+      </div>
+
     <div class="container first">
         <div class="row">
         <div class="col-md-10">
@@ -102,39 +121,39 @@
 <div class="container second">
     <div class="row image-container" style="padding-left: 15px;">
         <div class="col-md-6">
-            <img src="images/1L9A0965.jpg" width="110%" height="300px">
+            <img src="images/1L9A0965.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
         <div class="col-md-6 star">
-            <img src="images/1L9A0440.jpg" width="110%" height="300px">
+            <img src="images/1L9A0440.jpg" width="110%" height="300px" class="image overlay">
         </div>
-        </div>
+    </div>
+</div>
+
+
+<div class="container third">
+    <div class="row image-container" style="padding-left: 15px;">
+        <div class="col-md-6">
+            <img src="images/11x15-2.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
-        <div class="container third">
-        <div class="row   image-container" style="padding-left: 15px;">
-            <div class="col-md-6">
-                <img src="images/1L9A0012.jpg" width="110%" height="300px">
-            </div>
-    
-            <div class="col-md-6 star">
-                <img src="images/1L9A325.jpg" width="110%" height="300px">
-            </div>
-            </div>
+        <div class="col-md-6 star">
+            <img src="images/1L9A325.jpg" width="110%" height="300px" class="image overlay">
+        </div>
+    </div>
+</div>
+
+<div class="container fourth">
+    <div class="row image-container" style="padding-left: 15px;">
+        <div class="col-md-6">
+            <img src="images/1L9A5552.jpg" width="110%" height="300px" class="image overlay">
         </div>
 
-        
-        <div class="container fourth">
-            <div class="row   image-container" style="padding-left: 15px;">
-                <div class="col-md-6">
-                    <img src="images/1L9A5552.jpg" width="110%" height="300px">
-                </div>
-        
-                <div class="col-md-6 star">
-                    <img src="images/1L9A4809.jpg" width="110%" height="300px">
-                </div>
-                </div>
-            </div>
+        <div class="col-md-6 star">
+            <img src="images/1L9A4809.jpg" width="110%" height="300px" class="image overlay">
+        </div>
+    </div>
+</div>
 
 
 <div class="container-fluid usha">
@@ -142,62 +161,48 @@
         <div class="row">
             <div class="grid-container">
                
-                <div class="grid-item"> <img src="images/1L9A0011.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/1L9A325.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/1L9A0012.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/1L9A0032.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/1L9A1918.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/11x15-3.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"> <img src="images/DSC03770.jpg" width="80%" height="240px"></div>  
+                <div class="grid-item"><img src="images/1L9A6042.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A3338.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A4703.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/1L9A5269.jpg" width="80%" height="240px"></div>
+                <div class="grid-item"><img src="images/1L9A7991.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A4690.jpg" width="80%" height="240px"></div>
                 <div class="grid-item"><img src="images/1L9A1949.jpg" width="80%" height="240px"></div>  
               </div>
             </div>
         </div>
     </div>
+    <script>
+        // Get references to the modal and the preview image element
+        const modal = document.getElementById('previewModal');
+        const previewImage = document.getElementById('previewImage');
+    
+        // Get references to the grid images
+        const gridImages = document.querySelectorAll('.grid-item img');
+    
+        // Attach click event listeners to each grid image
+        gridImages.forEach((image, index) => {
+          image.addEventListener('click', () => {
+            // Set the src attribute of the preview image
+            previewImage.src = image.src;
+    
+            // Show the modal
+            modal.style.display = 'block';
+          });
+        });
+    
+        // Close the modal when the close button is clicked
+        const closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+      </script>
 
-<!--     
-<div class="container-fluid two">
-    <div class="container">
-        <div class="row">
-            <div class="grid-container">
-               
-                <div class="grid-item"> <img src="images/g1.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/n6.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"> <img src="images/g2.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>  
-                <div class="grid-item"><img src="images/g3.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/n6.jpg" width="80%" height="240px"></div>
-                <div class="grid-item"><img src="images/g4.jpg" width="80%" height="240px"></div>  
-              </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container-fluid three">
-        <div class="container">
-            <div class="row">
-                <div class="grid-container">
-                   
-                    <div class="grid-item"> <img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"> <img src="images/g5.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"> <img src="images/n7.jpg" width="80%" height="240px"></div>  
-                    <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n8.jpg" width="80%" height="240px"></div>  
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n6.jpg" width="80%" height="240px"></div>
-                    <div class="grid-item"><img src="images/n7.jpg" width="80%" height="240px"></div>  
-                  </div>
-                </div>
-            </div>
-        </div> -->
-      
 
 <!--Single Line-->
-<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8" style="padding-top: 30px;">
@@ -268,3 +273,68 @@
     </div>
 </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Get references to elements
+    var modal = $('#previewModal');
+    var previewImage = $('#previewImage');
+    var prevButton = $('.carousel-prev-btn');
+    var nextButton = $('.carousel-next-btn');
+
+    // Initialize the current image index
+    var currentIndex = 0;
+
+    // Array of image sources from your containers
+    var imageSources = [
+      'images/1L9A0965.jpg',
+      'images/1L9A0440.jpg',
+      'images/1L9A0012.jpg',
+      'images/1L9A325.jpg',
+      'images/1L9A5552.jpg',
+      'images/1L9A4809.jpg',
+      // Add more image paths here
+    ];
+
+    // Function to update the preview image
+    function updatePreview() {
+      previewImage.attr('src', imageSources[currentIndex]);
+    }
+
+    // Previous button click event
+    prevButton.click(function () {
+      currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+      updatePreview();
+    });
+
+    // Next button click event
+    nextButton.click(function () {
+      currentIndex = (currentIndex + 1) % imageSources.length;
+      updatePreview();
+    });
+
+    // Open the modal when an image in a container is clicked
+    $('.image.overlay').click(function () {
+      currentIndex = $('.image.overlay').index(this);
+      updatePreview();
+      modal.css('display', 'block');
+    });
+
+    // Close the modal when the close button is clicked
+    $('.close').click(function () {
+      modal.css('display', 'none');
+    });
+
+    // Close the modal when the user clicks outside of it
+    $(window).click(function (event) {
+      if (event.target === modal[0]) {
+        modal.css('display', 'none');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

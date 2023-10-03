@@ -3,33 +3,51 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.navbar{
+.nav-link{
+    margin-top:30px;
+   
+  }
+  .span{
+    text-align: justify;
+  }
+  .navbar{
     color: white;
+   
+}
+
+.nav-link{
+    margin-top:30px;
+    padding:40px;
+    font-family: 'Montserrat';
+  
 }
 .navbar-nav{
     display: flex;
     flex-direction: row;
     margin-right: 15px;
+    transition: padding 0.6s;
 }
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.navbar-nav .nav-link:hover {
-    border-bottom: 2px solid #0d0e0d; 
- 
+    font-family: 'Montserrat';
+    text-transform: uppercase;
 }
 .img-fluid{
     width: 19%;
-    margin-left: 100px;
+    height:40px;
+   
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
     display: block;
     margin-top: 2px;
     border: none;
+   
+}
+.navbar-nav .nav-link:hover {
+    border:1px solid #0d0e0d; 
+ 
 }
 .dropdown-menu {
     display: none;
@@ -64,6 +82,7 @@
     background-color: #fff;
     border-left: 3px solid #000;
 }
+
 .portfolio {
     background-color: #ededed;
     height: 240px;
@@ -87,7 +106,7 @@
 #storyDetails h3{
     padding-top: 45px;
     padding-left: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-family: 'Montserrat';
 }
 .anchor{
     display: flex;

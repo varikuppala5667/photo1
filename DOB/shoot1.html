@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERNITY PHOTO SHOOT</title>
+    <link rel="stylesheet" href="shoot1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!--ICONS-->
+     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+       rel="stylesheet">
+ 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+s 
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="js/accordion-menu2.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <style>
+      
+    </style>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  const options = {
+    root: null,
+    rootMargin: '5px',
+    threshold: 0.10,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('show');
+        }, 300); // Add a delay (adjust as needed) before adding the "show" class
+        observer.unobserve(entry.target); // Stop observing once the element is visible
+      }
+    });
+  }, options);
+
+  galleryItems.forEach((item) => {
+    observer.observe(item);
+  });
+});
+
+
+</script>
+
+
+
+</head>
+<body>
+    <div class="container-fluid fixed" style="background-color: white;">
+     
+    
+        <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
+
+            <div class="container-fluid" style="width:80%;height:60px">
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar" >
+                    <ul class="navbar-nav ms-auto " >
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
+                            <ul class="dropdown-menu">
+                              
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="portfolio.html">More</a></li>
+                            </ul>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
+
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
+                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                <li class="back-button"><a href="portfolio.html">More</a></li>
+                            </ul>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
+                        </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">CONTACT&nbsp;US</a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Stories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div><br><br>
+
+        <div class="container-fluid portfolio">
+          <h2>Newborn Babies</h2>
+              </div><br><br>
+   
+       
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a href="images/1L9A325.jpg" data-lightbox="image-group" data-title="Image 1">
+                                    <img src="images/1L9A325.jpg" alt="Image 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A2175.jpg" data-lightbox="image-group" data-title="Image 2">
+                                    <img src="images/1L9A2175.jpg" alt="Image 2">
+                                </a>
+                            </div>
+                      <div class="gallery-item">
+                                <a href="images/1L9A9936.jpg" data-lightbox="image-group" data-title="Image 3">
+                                    <img src="images/1L9A9936.jpg" alt="Image 3">
+                                </a>
+                            </div> 
+                            <div class="gallery-item">
+                                <a href="images/1L9A1491.jpg" data-lightbox="image-group" data-title="Image 4">
+                                    <img src="images/1L9A1491.jpg" alt="Image 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A1366.jpg" data-lightbox="image-group" data-title="Image 5">
+                                    <img src="images/1L9A1366.jpg" alt="Image 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A3165.jpg" data-lightbox="image-group" data-title="Image 6">
+                                    <img src="images/1L9A3165.jpg" alt="Image 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A5499.jpg" data-lightbox="image-group" data-title="Image 7">
+                                    <img src="images/1L9A5499.jpg" alt="Image 2" style="margin-top: -100px;">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A0952.jpg" data-lightbox="image-group" data-title="Image 8">
+                                    <img src="images/1L9A0952.jpg" alt="Image 2" style="margin-top: -100px;">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A7194.jpg" data-lightbox="image-group" data-title="Image 9">
+                                    <img src="images/1L9A7194.jpg" alt="Image 2" style="margin-top: -100px;">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A7366.jpg" data-lightbox="image-group" data-title="Image 10">
+                                    <img src="images/1L9A7366.jpg" alt="Image 2" style="margin-top: -100px;">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A9250.jpg" data-lightbox="image-group" data-title="Image 11">
+                                    <img src="images/1L9A9250.jpg" alt="Image 2" style="margin-top: -100px;">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A9586.jpg" data-lightbox="image-group" data-title="Image 12">
+                                    <img src="images/1L9A9586.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="images/1L9A9895.jpg" data-lightbox="image-group" data-title="Image 13">
+                                    <img src="images/1L9A9895.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A0686.jpg" data-lightbox="image-group" data-title="Image 14">
+                                    <img src="images/1L9A0686.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            
+                         <div class="gallery-item">
+                                <a href="images/1L9A0755.jpg" data-lightbox="image-group" data-title="Image 15">
+                                    <img src="images/1L9A0755.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A9039.jpg" data-lightbox="image-group" data-title="Image 16">
+                                    <img src="images/1L9A9039.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+
+                            <div class="gallery-item" style="margin-top:10px">
+                                <a href="images/1L9A7909.jpg" data-lightbox="image-group" data-title="Image 17">
+                                    <img src="images/1L9A7909.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A3073.jpg" data-lightbox="image-group" data-title="Image 18">
+                                    <img src="images/1L9A3073.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <a href="images/1L9A5384.jpg" data-lightbox="image-group" data-title="Image 19">
+                                    <img src="images/1L9A5384.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery-item"style="margin-top:10px">
+                                <a href="images/1L9A1334.jpg" data-lightbox="image-group" data-title="Image 20">
+                                    <img src="images/1L9A1334.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A1337 copy.jpg" data-lightbox="image-group" data-title="Image 21">
+                                    <img src="images/1L9A1337 copy.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A2424.jpg" data-lightbox="image-group" data-title="Image 22">
+                                    <img src="images/1L9A2424.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                           
+
+                            <div class="gallery-item"style="margin-top:10px">
+                                <a href="images/1L9A2496.jpg" data-lightbox="image-group" data-title="Image 23">
+                                    <img src="images/1L9A2496.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            
+                            <div class="gallery-item">
+                                <a href="images/1L9A3191.jpg" data-lightbox="image-group" data-title="Image 24">
+                                    <img src="images/1L9A3191.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+                            
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A1161.jpg" data-lightbox="image-group" data-title="Image 25">
+                                    <img src="images/1L9A1161.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            <div class="gallery-item" style="margin-top:20px">
+                                <a href="images/1L9A1188.jpg" data-lightbox="image-group" data-title="Image 26">
+                                    <img src="images/1L9A1188.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            
+                            <div class="gallery-item">
+                                <a href="images/1L9A6549.jpg" data-lightbox="image-group" data-title="Image 27">
+                                    <img src="images/1L9A6549.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                                
+                            <div class="gallery-item">
+                                <a href="images/1L9A6382.jpg" data-lightbox="image-group" data-title="Image 28">
+                                    <img src="images/1L9A6382.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            <div class="gallery-item">
+                                <a href="images/1L9A6497.jpg" data-lightbox="image-group" data-title="Image 29">
+                                    <img src="images/1L9A6497.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                            <div class="gallery-item">
+                                <a href="images/DSC04938.jpg" data-lightbox="image-group" data-title="Image 30">
+                                    <img src="images/DSC04938.jpg" alt="Image 2" style="margin-top: -100px;height:400px">
+                                </a>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
+                <div class="container">
+                    <div class="row" style="height:40px">
+                        <div class="col-lg-8">
+                            <span>Ready to shoot? Still curious? We’re more than happy to help you!</span>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="requestappoint.html">
+                            <button class="btn btn-outline-secondary btn-sm">REQUEST AN APPOINTMENT</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="container-fluid footer" style="margin-top: -47px; color: black;">
+                <div class="container">
+                    <div class="row" style="color: #000;"> 
+                        <div class="col-md-4">
+                            <h3 class="footerh3">DayOfBorn PHOTOGRAPHY</h3>
+                            <P class="footerpara">You are warmly welcomed in our maternity & kids atelier in Bavdhan, green and peaceful suburbs of Pune, perfectly suited for candid and happy clicks!</P>
+                            <div class="socialfooter">
+                                <span><a href="https://instagram.com/dayofborn?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a></span>&nbsp;
+                                <span><a href="https://www.facebook.com/Dayofborn?mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a></span>&nbsp;
+                                <span><a href="https://youtube.com/@dayofborn#DOB3440"><i class="fa fa-youtube"></i></a></span>&nbsp;
+                                <span><a href="https://wa.me/919573796339"><i class="fa fa-whatsapp"></i></a></span>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <h3 class="footerh3">CONTACT INFO</h3>
+                            <ul class="footerservice">
+                                <li><a href="#"><p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vignanpuri colony, Mythri Nagar, Kukatpally</p></a></li>
+                                <li><a href="tel:9573796339"><p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91 9573796339</p></a></li>
+                                <li><a href="mailto:dayofborn@gmail.com"><p><i class="fa fa-envelope"></i>&nbsp;&nbsp;dayofborn@gmail.com</p></a></li>
+                                <li><a href="www.dayofborn.com"><p><i class="fa fa-globe"></i>&nbsp;&nbsp;www.dayofborn.com</p></a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <h3 class="footerh3">WHAT PEOPLE SAY</h3>
+                            <img src="images/Logo web.png" alt="" width="200px" height="100px">
+                            <p>DayOfBorn photography</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+              
+              <!--LAST FOOTER -->
+              <div class="container-fluid" style="background-color: #ededed; color: #000;">
+                <div class="container">
+                  <div class="row lastfooter">
+                    <div class="col-sm-6">
+                      <p>2012 - 2023 © Copyrights DayOfBorn Photography | Hyderabad |  Privacy Policy  |  <a href="sitemap.html">sitemap</a></p>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+              
+              
+              <a href="#" class="to-top">
+                <i class="fa-solid fa-chevron-up"></i>
+              </a>
+              
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+              <script src="js/accordion-menu2.js"></script>
+              
+              
+              
