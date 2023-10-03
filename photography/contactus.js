@@ -3,13 +3,11 @@ const router = express.Router();
 const mysql = require("mysql2");
 const cors = require("cors");
 
-
-
 const connection = mysql.createConnection({
-  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
-  user: "admin2", // Replace with your MySQL username
-  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
-  database: "testingDb",
+  host: "localhost",
+  user: "root", // Replace with your MySQL username
+  password: "1234", // Replace with your MySQL password
+  database: "photography",
 });
 router.use(cors());
 // Save a new contact

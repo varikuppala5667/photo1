@@ -3,48 +3,33 @@ const router = express.Router();
 const mysql = require("mysql2");
 const multer = require("multer");
 const connection = mysql.createConnection({
-  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
-  user: "admin2", // Replace with your MySQL username
-  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
-  database: "testingDb",
+  host: "localhost",
+  user: "root",
+  password: "1234", 
+  database: "photography",
 });
+
 const upload = multer({ storage: multer.memoryStorage() });
 
 
 router.post("/images", upload.single("image_data"), (req, res) => {
-  const image = req.file.buffer;
+  const image = req.file.buffer; 
 
   if (!image) {
     return res.status(400).json({ error: "No image data provided" });
   }
 
-  // Check if the maximum limit of 4 rows is reached
-  const checkQuery = "SELECT COUNT(*) AS rowCount FROM images";
-  connection.query(checkQuery, (err, results) => {
+
+  const insertQuery = "INSERT INTO images (image_data) VALUES (?)";
+  connection.query(insertQuery, [image], (err, result) => {
     if (err) {
-      console.error("Error checking row count:", err);
-      return res.status(500).json({ error: "Error checking row count" });
+      console.error("Error uploading image:", err);
+      return res.status(500).json({ error: "Failed to upload image" });
     }
 
-    const rowCount = results[0].rowCount;
-
-    if (rowCount >= 4) {
-      return res.status(400).json({ error: "Maximum limit of 4 rows reached" });
-    }
-
-    // If the limit is not reached, insert the new image data
-    const insertQuery = "INSERT INTO images (image_data) VALUES (?)";
-    connection.query(insertQuery, [image], (err, result) => {
-      if (err) {
-        console.error("Error uploading image:", err);
-        return res.status(500).json({ error: "Failed to upload image" });
-      }
-
-      return res.status(201).json({ message: "Image uploaded successfully" });
-    });
+    return res.status(201).json({ message: "Image uploaded successfully" });
   });
 });
-
 
 
 router.get("/images", (req, res) => {

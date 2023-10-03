@@ -5,42 +5,27 @@
 }
 .navbar{
     color: white;
-   
-}
-
-.nav-link{
-    margin-top:30px;
-    padding:40px;
-    font-family: 'Montserrat';
-  
 }
 .navbar-nav{
-    display: flex;
-    flex-direction: row;
-    margin-right: 15px;
-    transition: padding 0.6s;
+    margin-right: 50px;
 }
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .img-fluid{
     width: 19%;
-    height:40px;
-   
+    margin-left: 100px;
 }
-/* Add this CSS to your existing styles or style tag */
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
+}
 .nav-item:hover .dropdown-menu {
     display: block;
     margin-top: 2px;
     border: none;
-   
-}
-.navbar-nav .nav-link:hover {
-    border:1px solid #0d0e0d; 
- 
 }
 .dropdown-menu {
     display: none;
@@ -77,43 +62,18 @@
 }
 .portfolio {
     background-color: #ededed;
-    height: 330px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: -82px;
-    padding-top:120px
 }
 
-.price{
-    text-align:center;
-}
-.price h2{
-    font-family: 'Montserrat';
-    margin-top:50px;
-}
-
-.img-fluid{
-    width: 19%;
-    margin-left: 40px;
-    height:40px;
-    }
-    
-    nav .nav-link:hover {
-    border: 1px solid #0d0e0d; 
-    cursor: pointer;
- 
-}
-
-.nav-link{
-    margin-top:30px;
-   
-  }
 .portfolio h3{
     padding-top: 45px;
     padding-left: 40px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .anchor{
     display: flex;
@@ -200,7 +160,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footerservice a{
     text-decoration: none;

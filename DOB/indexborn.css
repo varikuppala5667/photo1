@@ -5,42 +5,28 @@
 }
 .navbar{
     color: white;
-   
-}
-
-.nav-link{
-    margin-top:30px;
-    padding:40px;
-    font-family: 'Montserrat';
-  
 }
 .navbar-nav{
-    display: flex;
-    flex-direction: row;
-    margin-right: 15px;
-    transition: padding 0.6s;
+    margin-right: 50px;
 }
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
 }
 .img-fluid{
     width: 19%;
-    height:40px;
-   
+    margin-left: 100px;
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
     display: block;
     margin-top: 2px;
     border: none;
-   
-}
-.navbar-nav .nav-link:hover {
-    border:1px solid #0d0e0d; 
- 
 }
 .dropdown-menu {
     display: none;
@@ -101,10 +87,7 @@
     margin-top: 20px;
     margin-top: 7px;
 }
-.heading h2{
-    font-family: 'Montserrat';
-    margin-top: 20px;
-}
+
 .second .image-container img{
    width: 480px;
 }
@@ -193,7 +176,7 @@
 }
 .footerservice h5{
     font-size: 18px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footerservice a{
     text-decoration: none;
@@ -262,70 +245,9 @@
     color: #0090D2;
 }
 
-/* Add CSS for the modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .modal-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  .carousel-container {
-    position: relative;
-  }
-  
-  .carousel-slide {
-    display: flex;
-  }
-  .preview-image {
-    max-width: 650px;
-    max-height: 100%;
-  }
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
-    background-color: #000;
-    padding: 15px;
-  }
-  .carousel-prev-btn {
-    left: 10px;
-  }
-  .carousel-next-btn {
-    right: 10px;
-  }
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #007bff;
-  }
-  
-  /* Style the overlay icon */
-  .carousel-image .overlay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
+
+
+
 
 @media (max-width: 568px) {
 

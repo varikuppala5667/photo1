@@ -4,22 +4,7 @@
     box-sizing: border-box;
 }
 
-.img-fluid{
-    width: 19%;
-    margin-left: 40px;
-    height:40px;
-    }
-    
-    nav .nav-link:hover {
-    border: 1px solid #0d0e0d; 
-    cursor: pointer;
- 
-}
 
-.nav-link{
-    margin-top:30px;
-   
-  }
 .mystory1 a {
    
     color: #080808;
@@ -90,12 +75,11 @@
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .img-fluid{
     width: 19%;
-    margin-left: 40px;
+    margin-left: 100px;
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
@@ -478,7 +462,7 @@ h5{
 }
 .footerservice h5{
     font-size: 18px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footerservice a{
     text-decoration: none;
@@ -598,7 +582,7 @@ h5{
 }
 .footerservice h5{
     font-size: 18px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footerservice a{
     text-decoration: none;

@@ -4,10 +4,10 @@ const mysql = require("mysql2");
 const multer = require("multer");
 const sharp = require("sharp");
 const connection = mysql.createConnection({
-  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
-  user: "admin2", // Replace with your MySQL username
-  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
-  database: "testingDb",
+  host: "localhost",
+  user: "root", // Replace with your MySQL username
+  password: "1234", // Replace with your MySQL password
+  database: "photography",
 });
 
 // Set up multer for handling image uploads

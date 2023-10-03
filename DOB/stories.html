@@ -20,68 +20,65 @@
 
 </head>
 <body>
-    <div class="container-fluid fixed" style="background-color: white;">
-        <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
-
-            <div class="container-fluid" style="width:80%;height:60px">
-            
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar" >
-                    <ul class="navbar-nav ms-auto " >
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
-                            <ul class="dropdown-menu">
-                              
-                                <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
-                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                <li class="back-button"><a href="portfolio.html">More</a></li>
-                            </ul>
-                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
-                       
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
-
-                            <ul class="dropdown-menu">
+    <div class="container-fluid fixed">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-white fixed-top" style="background-color: white;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">
+                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 
-                                <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
-                                <li><a href="babyphoto.html">Baby Photo Session</a></li>
-                                <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
-                                <li class="back-button"><a href="portfolio.html">More</a></li>
-                            </ul>
-                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="nav-link" href="#">Service<span class="caret-down-icon"></span></a>
+                                <ul class="dropdown-menu" id="servicesDropdown">
+                                   
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="service.html">More</a></li>
+                                </ul>
+                            </li>
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="newborn.html">Newborn Photo Session</a></li>
+                                    <li><a href="babyphoto.html">Baby Photo Session</a></li>
+                                    <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
+                                    <li class="back-button"><a href="portfolio.html">More</a></li>
+                                </ul>
+                            </li>
 
-                        <a class="navbar-brand" href="javascript:void(0)">
-                            <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
-                        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
-                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactus.html">CONTACT&nbsp;US</a>
-                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <li class="nav-item">
-                            <a class="nav-link" href="stories.html">Stories</a>
-                        </li>
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="stories.html">Stories</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-            
-        </div>
+            </nav>
         </div>
     </div>
+
+
 <div class="container"    style="margin-top: 100px; ">
    <div class="row sto">
         <div class="col-md-9" >
@@ -100,7 +97,7 @@
 <!--     
     <script>
        function fetchAndPopulateStoriesList() {
-    fetch('http://13.233.102.186:8080/api/stories/stories')
+    fetch('http://18.214.88.216:80/api/stories/stories')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch stories data');
@@ -181,7 +178,7 @@ document.addEventListener('DOMContentLoaded', fetchAndPopulateStoriesList);
     
     <script>
         function fetchAndPopulateStoriesList() {
-          fetch('http://13.233.102.186:8080/api/stories/stories')
+          fetch('http://18.214.88.216:80/api/stories/stories')
             .then(response => {
               if (!response.ok) {
                 throw new Error('Failed to fetch stories data');
@@ -352,7 +349,7 @@ document.addEventListener('DOMContentLoaded', fetchAndPopulateStoriesList);
   
 
 <!--Single Line-->
-<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">

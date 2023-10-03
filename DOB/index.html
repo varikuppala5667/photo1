@@ -11,15 +11,12 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/29485d9027.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
       <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("shareIcon").addEventListener("click", function() {
@@ -70,12 +67,14 @@
      </style>
 </head>
 <body>
-    <div class="container-fluid fixed" style="background-color: white;">
-     
-        <nav class="navbar navbar-expand-sm navbar-white navbar-transition fixed-top" style="top:10; width:100%;margin:auto;background-color:white;padding-right:30px;">
+    <div class="container-fluid fixed">
+        <div class="container">
 
-                <div class="container-fluid" style="width:80%;height:60px">
-                
+            <nav class="navbar navbar-expand-sm navbar-white  navbar-transition fixed-top" style="background-color: white;" style="top:10;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">
+                        <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px; margin-top: 10px;">
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -83,7 +82,7 @@
                         <ul class="navbar-nav ms-auto " >
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-link" href="service.html">Service<span class="caret-down-icon"></span></a>
                                 <ul class="dropdown-menu">
@@ -94,7 +93,7 @@
                                     <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
                                     <li class="back-button"><a href="portfolio.html">More</a></li>
                                 </ul>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-link" href="portfolio.html">Portfolio<span class="caret-down-icon"></span></a>
@@ -102,26 +101,21 @@
                                 <ul class="dropdown-menu">
                                     
                                     <li><a href="newborn.html">Newborn Photo Session</a></li>
-                                    <li><a href="birthdayshoot.html">Birthday Photo Session</a></li>
                                     <li><a href="babyphoto.html">Baby Photo Session</a></li>
                                     <li><a href="sitterphoto.html">Sitter Photo Session</a></li>
                                     <li class="back-button"><a href="portfolio.html">More</a></li>
                                 </ul>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="pricing.html">Pricing</a>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                            <a class="navbar-brand" href="javascript:void(0)">
-                                <img src="images/Logo web.png" class="img-fluid" alt="logo" style="width: 200px;">
-                            </a>
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="nav-link" href="aboutus.html">About us</a>
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact us.html">CONTACT US</a>
-                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="nav-link" href="contactus.html">Contact us</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="stories.html">Stories</a>
                             </li>
@@ -130,9 +124,9 @@
                 </div>
             </nav>
             
+
         </div>
-        </div>
-    </div><br><br><br>
+    </div><br><br><br><br><br>
 
     <!-- Slider  -->
    
@@ -171,7 +165,7 @@
   // Function to fetch images from the server and populate the dynamic carousel
   function fetchAndPopulateImages() {
     // Make a GET request to your backend's /images endpoint
-    fetch('http://13.233.102.186:8080/api/images/images')
+    fetch('http://localhost:3000/api/images/images')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch images');
@@ -220,8 +214,8 @@
           const imgElement = document.createElement('img');
           imgElement.src = URL.createObjectURL(blob);
           imgElement.alt = 'Image';
-          imgElement.style.width = '1349'; // Set the width as needed
-        imgElement.style.height = '422px';
+          imgElement.style.width = '200%'; // Set the width as needed
+        imgElement.style.height = '500px';
           // Append the img element to the carousel item
           carouselItem.appendChild(imgElement);
   
@@ -246,7 +240,7 @@
     // Function to fetch images from the server
     function fetchImages() {
         // Make a GET request to your backend's /images endpoint
-        fetch('http://13.233.102.186:8080/api/images/images')
+        fetch('http://localhost:3000/api/images/images')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch images');
@@ -278,20 +272,10 @@
 
         <!-- Text container inside the slider -->
         <div class="text-container">
-            <p class="animated-text">Today's Moments are Tomorrow's</p>
-            <p class="tt">Memories</p>
-            <p><a href="index.html"><button class="name" style="padding-bottom: 20px;">Freeze the moment</button></a></p>
-        </div>
-    
-      <script>
-        // JavaScript to remove the text after a delay
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    var textContainer = document.querySelector('.text-container');
-    textContainer.style.display = 'none';
-  }, 5000); // Adjust the delay (in milliseconds) as needed
-});
-</script>
+            <p class="animated-text">Today's Moments are Tomorrow's Memory</p>
+            <p><a href="index.html"><button>Freeze the moment</button></a></p>
+          </div>
+
 
       
 <div class="container">
@@ -500,7 +484,7 @@ window.addEventListener('load', function() {
   </div>
 
 <div class="container-fluid service">
-    <h2 class="edita">DAY OF BORN PHOTOGRAPHY SERVICES</h2>
+    <h1 class="edita">DAY OF BORN PHOTOGRAPHY SERVICES</h1>
     <div class="container">
        
         <a href="service.html""  class="btn btn-shutter btn-shutter-black">VIEW ALL SERVICE</a>
@@ -516,7 +500,7 @@ window.addEventListener('load', function() {
                 <div class="item">
                     <div class="pad15">
                         <div class="carousel-image">
-                            <img src="images/1L9A1711.jpg" alt="Image 2" class="image">
+                            <img src="images/1L9A9254.jpg" alt="Image 2" class="image">
                             <div class="overlay1">
                               
                                 <a href="babyphoto.html"><i class="material-icons">local_see</i></a>
@@ -755,7 +739,7 @@ window.addEventListener('load', function() {
 
 <!--FAQ-->
 <div class="container">
-    <h1 style="font-family:'Montserrat';">FAQ</h1>
+    <h1>FAQ</h1>
     <div class="row">
     <div class="col-lg-8 accordionhead">
         <div id="accordion" class="accordion-container">
@@ -789,15 +773,15 @@ window.addEventListener('load', function() {
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1"1>
-                    <img src="images/22.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/123.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
-                         <a href="contact us.html"><i class="fa-sharp fa-solid fa-share-nodes"></i></a> 
+                         <a href="contactus.html"><i class="fa-sharp fa-solid fa-share-nodes"></i></a> 
                           
                     </div> -->
                 </div>
                 
                 <div class="container " style="width: 360px;">
-                  <h4 class="story"><b>AN OUTSTANDING FITNESS PHOTO SHOOT THAT YOU’LL LOVE</b></h4> 
+                  <h4 class="story"><b>AMAZING CLOSE UP PHOTOS OF NEWBORN BABIES</b></h4> 
                   <p>Book your newborn photo shoot now! Please check our latest work on Instagram.</p>
                   <i class="fa-sharp fa-solid fa-share-nodes"></i>
                   <a href="indexborn.html"  class="btn btn-shutter btn-shutter-black">Read More</a>
@@ -808,14 +792,14 @@ window.addEventListener('load', function() {
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1">
-                    <img src="images/9.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/1234.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
                         <i class="fa-sharp fa-solid fa-share-nodes"></i> 
                       <p class="texts">Image Description</p> 
                     </div> -->
                 </div>
                 <div class="container">
-                    <h4 class="story1"><b>AMAZING CLOSE UP PHOTOS OF NEWBORN BABIES</b></h4> 
+                    <h4 class="story1"><b>AN OUTSTANDING FITNESS PHOTO SHOOT THAT YOU’LL LOVE</b></h4> 
                     <p>We are happy to announce that we are starting fitness photo shoots in Pune in collaboration with Adiaesthetics. I started…</p> 
 
                     <i class="fa-sharp fa-solid fa-share-nodes"></i>
@@ -827,7 +811,7 @@ window.addEventListener('load', function() {
         <div class="col-md-4">
             <div class="card c2">
                 <div class="carousel-image1">
-                    <img src="images/33.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
+                    <img src="images/22222.jpg" alt="Image 2" class="image" style="width: 334px;height: 300px;">
                     <!-- <div class="overlay">
                         <i class="fa-sharp fa-solid fa-share-nodes"></i> 
                     <p class="texts">Image Description</p>  
@@ -851,9 +835,9 @@ window.addEventListener('load', function() {
 
 
 <!--Single Line-->
-<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 60px;">
+<div class="container-fluid" style="background-color: #ededed; margin-top: 50px; margin-bottom: 60px; height: 90px;">
     <div class="container">
-        <div class="row" style="height:40px">
+        <div class="row">
             <div class="col-lg-8">
                 <span>Ready to shoot? Still curious? We’re more than happy to help you!</span>
             </div>
@@ -1204,14 +1188,7 @@ shareIcon.addEventListener('click', () => {
 
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Add the 'fade-in' class to the button after a delay (e.g., 1 second)
-        setTimeout(function () {
-            document.querySelector(".name").classList.add("fade-in");
-        }, 1000); // 1000 milliseconds (1 second)
-    });
-</script>
+
 
 
 

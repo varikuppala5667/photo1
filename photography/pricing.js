@@ -9,10 +9,10 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 // Replace with your MySQL connection configuration
 const connection = mysql.createConnection({
-  host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
-  user: "admin2", // Replace with your MySQL username
-  password: "82tsHD0MwIF1JzSCi6sF", // Replace with your MySQL password
-  database: "testingDb",
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "photography",
 });
 router.use(cors());
 
@@ -69,39 +69,26 @@ router.post("/pricing", upload.single("image"), (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  // Check if the maximum limit of 6 rows is reached
-  const checkQuery = "SELECT COUNT(*) AS rowCount FROM pricing";
-  connection.query(checkQuery, (err, results) => {
-    if (err) {
-      console.error("Error checking row count:", err);
-      return res.status(500).json({ error: "Error checking row count" });
-    }
+  // If there's an image file uploaded, you can access its details from "req.file"
+  // For example, you can get the file data using "req.file.buffer"
 
-    const rowCount = results[0].rowCount;
+  const insertQuery = `INSERT INTO pricing (image, title, subtitle, terms_and_conditions, price)
+  VALUES (?, ?, ?, ?, ?)`;
 
-    if (rowCount >= 6) {
-      return res.status(400).json({ error: "Maximum limit of 6 rows reached" });
-    }
-
-    // If the limit is not reached, insert the new pricing data
-    const insertQuery = `INSERT INTO pricing (image, title, subtitle, terms_and_conditions, price)
-      VALUES (?, ?, ?, ?, ?)`;
-
-    connection.query(
-      insertQuery,
-      [imageFile.buffer, title, subtitle, terms_and_conditions, price],
-      (err, results) => {
-        if (err) {
-          console.error("Error creating pricing entry:", err);
-          res.status(500).json({ error: "Error creating pricing entry" });
-        } else {
-          res.status(201).json({ id: results.insertId, ...req.body });
-        }
+  // Assuming the file_path column is used to store the file path in the database
+  connection.query(
+    insertQuery,
+    [imageFile.buffer, title, subtitle, terms_and_conditions, price],
+    (err, results) => {
+      if (err) {
+        console.error("Error creating pricing entry:", err);
+        res.status(500).json({ error: "Error creating pricing entry" });
+      } else {
+        res.status(201).json({ id: results.insertId, ...req.body });
       }
-    );
-  });
+    }
+  );
 });
-
 
 
 // API endpoint to update an existing pricing entry

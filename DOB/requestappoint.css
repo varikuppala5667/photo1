@@ -7,13 +7,6 @@
     color: white;
    
 }
-
-.nav-link{
-    margin-top:30px;
-    padding:40px;
-    font-family: 'Montserrat';
-  
-}
 .navbar-nav{
     display: flex;
     flex-direction: row;
@@ -23,24 +16,21 @@
 .nav-item .nav-link{
     color: black;
     font-size: 17px;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #0d0e0d; 
+ 
 }
 .img-fluid{
     width: 19%;
-    height:40px;
-   
+    margin-left: 100px;
 }
 /* Add this CSS to your existing styles or style tag */
 .nav-item:hover .dropdown-menu {
     display: block;
     margin-top: 2px;
     border: none;
-   
-}
-.navbar-nav .nav-link:hover {
-    border:1px solid #0d0e0d; 
- 
 }
 .dropdown-menu {
     display: none;
@@ -102,7 +92,7 @@
 .portfolio h3{
     padding-top: 45px;
     padding-left: 40px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .anchor{
     display: flex;
@@ -399,7 +389,7 @@ button[type="submit"] {
 }
 .footerservice h5{
     font-size: 18px;
-       font-family: 'Montserrat';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .footerservice a{
     text-decoration: none;
