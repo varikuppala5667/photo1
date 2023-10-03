@@ -63,6 +63,7 @@
     transition: background-color 0.6s ease;
   }
 
+ 
   /* Add this CSS to highlight the active dot */
   .active {
     background-color: #717171;
@@ -120,7 +121,7 @@
                                 <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
                             </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
-                                <a class="nav-link" href="contact us.html">CONTACT US</a>
+                                <a class="nav-link" href="contactus.html">CONTACT US</a>
                             </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item">
                                 <a class="nav-link" href="stories.html">Stories</a>
@@ -171,7 +172,7 @@
   // Function to fetch images from the server and populate the dynamic carousel
   function fetchAndPopulateImages() {
     // Make a GET request to your backend's /images endpoint
-    fetch('http://13.233.102.186:8080/api/images/images')
+    fetch('http://localhost:3000/api/images/images')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch images');
@@ -246,7 +247,7 @@
     // Function to fetch images from the server
     function fetchImages() {
         // Make a GET request to your backend's /images endpoint
-        fetch('http://13.233.102.186:8080/api/images/images')
+        fetch('http://localhost:3000/api/images/images')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch images');

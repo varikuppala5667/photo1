@@ -7,7 +7,6 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 
 
-// Replace with your MySQL connection configuration
 const connection = mysql.createConnection({
   host: "database-1.ce8foznoiqpc.ap-south-1.rds.amazonaws.com",
   user: "admin2", // Replace with your MySQL username

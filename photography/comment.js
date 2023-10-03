@@ -10,7 +10,6 @@ const connection = mysql.createConnection({
   database: "testingDb",
 });
 
-
 // Get all comments
 router.get("/comments", (req, res) => {
   const getAllCommentsQuery = "SELECT * FROM comment";

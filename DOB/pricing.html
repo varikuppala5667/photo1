@@ -167,7 +167,7 @@
             });
         }
     
-        fetch('http://13.233.102.186:8080/api/pricing/pricing')
+        fetch('http://localhost:3000/api/pricing/pricing')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch pricing data');

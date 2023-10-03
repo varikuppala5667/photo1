@@ -71,7 +71,7 @@
                         <a class="nav-link" href="aboutus.html">ABOUT&nbsp;DOB</a>
                     </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a class="nav-link" href="contact us.html">CONTACT US</a>
+                        <a class="nav-link" href="contactus.html">CONTACT US</a>
                     </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
                         <a class="nav-link" href="stories.html">Stories</a>
@@ -109,7 +109,7 @@
     const storyId = urlParams.get('id');
 
     // Fetch the image for the story and set it as the src of the image element
-    fetch(`http://13.233.102.186:8080/api/photos/photos/${storyId}`)
+    fetch(`http://localhost:3000/api/photos/photos/${storyId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch story data');
@@ -151,7 +151,7 @@
     }
 
   // Fetch the story details and populate title and subtitle
-  fetch(`http://13.233.102.186:8080/api/stories/stories/${storyId}`)
+  fetch(`http://localhost:3000/api/stories/stories/${storyId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch story data');

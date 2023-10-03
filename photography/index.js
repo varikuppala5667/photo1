@@ -45,13 +45,9 @@ function startServer() {
   app.use('/api/stories', storiesRoutes);
   app.use('/api/photos', photostories)
 app.use('/api/images',imagesRoutes)
-const IP_ADDRESS = '13.233.102.186';
-  const port = 8080;
+
+  const port = 3000;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-  });
-
-  app.listen(PORT, IP_ADDRESS, () => {
-    console.log(`Server is running on http://${IP_ADDRESS}:${PORT}`);
   });
 }
